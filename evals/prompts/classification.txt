@@ -1,0 +1,24 @@
+Classify the following staff message into one intent category.
+
+MESSAGE:
+{{input}}
+
+CATEGORIES:
+- availability_update: Staff reporting when they can/cannot work
+- schedule_query: Staff asking about their schedule or shifts
+- swap_request: Staff requesting to swap shifts with someone
+- confirmation: Staff confirming or accepting something
+- rejection: Staff declining or rejecting something
+- feedback: Staff providing feedback about schedules or preferences
+- unknown: Message doesn't fit any category
+
+Return JSON:
+{
+  "intent": "category_name",
+  "confidence": 0.0-1.0,
+  "entities": {
+    "dates": ["YYYY-MM-DD"],
+    "staff_mentioned": ["name"],
+    "shifts_mentioned": ["shift_id or description"]
+  }
+}

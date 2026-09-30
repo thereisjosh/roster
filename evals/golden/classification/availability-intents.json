@@ -1,0 +1,10 @@
+{
+  "description": "Availability update intent classification",
+  "cases": [
+    { "input": "I cannot work this Saturday, got wedding to attend", "expected_intent": "availability_update" },
+    { "input": "MC today, not feeling well", "expected_intent": "availability_update" },
+    { "input": "Next week Monday to Friday all can", "expected_intent": "availability_update" },
+    { "input": "Taking leave on 15th and 16th Jan", "expected_intent": "availability_update" },
+    { "input": "Sorry boss, kid sick so tomorrow cannot come in", "expected_intent": "availability_update" }
+  ]
+}

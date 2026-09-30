@@ -1,0 +1,31 @@
+# Debug config: diagnose h15 barista gap
+# Runs 2 tests with reasoning prompt to understand LLM behavior at boundary hours
+# Run: npm run eval:schedule:compressed:debug
+
+description: "Schedule Generation (Compressed) — h15 Debug"
+
+prompts:
+  - id: schedule-generation-compressed-debug
+    label: "Schedule Generation (Compressed Debug)"
+    raw: "file://prompts/schedule-generation-compressed-debug.txt"
+
+providers:
+  - id: anthropic:messages:claude-sonnet-4-5-20250929
+    label: "Claude Sonnet 4.5"
+    config:
+      temperature: 0
+      max_tokens: 16384
+
+tests:
+  - description: "Week 9 Mar — fairness_optimised (debug)"
+    vars:
+      task_type: schedule_generation
+      variationType: fairness_optimised
+      input: "file://golden/schedules/week-9mar.json"
+      reference: "file://golden/schedules/week-9mar-expected-slots.json"
+
+outputPath: evals/results/schedule-generation-compressed-debug.json
+
+defaultTest:
+  options:
+    transformVars: "file://transforms/compute-eligibility-compressed.js"

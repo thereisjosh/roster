@@ -1,0 +1,169 @@
+# Preference ceiling eval: test schedule quality at 5, 15, and 30 injected rules
+# Run: npm run eval:preference-ceiling
+
+description: "Preference Ceiling — Rule Count Impact on Schedule Quality"
+
+prompts:
+  - id: schedule-generation-compressed
+    label: "Schedule Generation (Compressed)"
+    raw: "file://prompts/schedule-generation-compressed.txt"
+
+providers:
+  - id: "file://./providers/structured-output-provider.ts"
+    label: "Claude Sonnet 4.6 (Structured Output)"
+    config:
+      model: "claude-sonnet-4-6"
+      temperature: 0
+      max_tokens: 16384
+
+tests:
+  # --- 0 rules (baseline) ---
+  - description: "Week 23 Feb — balanced — 0 rules (baseline)"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      ruleCount: "0"
+      input: "file://golden/schedules/week-23feb.json"
+      reference: "file://golden/schedules/week-23feb-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/preference-ceiling-scorer.ts"
+
+  # --- 5 rules ---
+  - description: "Week 23 Feb — balanced — 5 rules"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      ruleCount: "5"
+      input: "file://golden/schedules/week-23feb.json"
+      reference: "file://golden/schedules/week-23feb-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/preference-ceiling-scorer.ts"
+
+  - description: "Week 23 Feb — cost_optimised — 5 rules"
+    vars:
+      task_type: schedule_generation
+      variationType: cost_optimised
+      ruleCount: "5"
+      input: "file://golden/schedules/week-23feb.json"
+      reference: "file://golden/schedules/week-23feb-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/preference-ceiling-scorer.ts"
+
+  - description: "Week 23 Feb — fairness_optimised — 5 rules"
+    vars:
+      task_type: schedule_generation
+      variationType: fairness_optimised
+      ruleCount: "5"
+      input: "file://golden/schedules/week-23feb.json"
+      reference: "file://golden/schedules/week-23feb-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/preference-ceiling-scorer.ts"
+
+  # --- 15 rules ---
+  - description: "Week 23 Feb — balanced — 15 rules"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      ruleCount: "15"
+      input: "file://golden/schedules/week-23feb.json"
+      reference: "file://golden/schedules/week-23feb-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/preference-ceiling-scorer.ts"
+
+  - description: "Week 23 Feb — cost_optimised — 15 rules"
+    vars:
+      task_type: schedule_generation
+      variationType: cost_optimised
+      ruleCount: "15"
+      input: "file://golden/schedules/week-23feb.json"
+      reference: "file://golden/schedules/week-23feb-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/preference-ceiling-scorer.ts"
+
+  - description: "Week 23 Feb — fairness_optimised — 15 rules"
+    vars:
+      task_type: schedule_generation
+      variationType: fairness_optimised
+      ruleCount: "15"
+      input: "file://golden/schedules/week-23feb.json"
+      reference: "file://golden/schedules/week-23feb-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/preference-ceiling-scorer.ts"
+
+  # --- 30 rules ---
+  - description: "Week 23 Feb — balanced — 30 rules"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      ruleCount: "30"
+      input: "file://golden/schedules/week-23feb.json"
+      reference: "file://golden/schedules/week-23feb-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/preference-ceiling-scorer.ts"
+
+  - description: "Week 23 Feb — cost_optimised — 30 rules"
+    vars:
+      task_type: schedule_generation
+      variationType: cost_optimised
+      ruleCount: "30"
+      input: "file://golden/schedules/week-23feb.json"
+      reference: "file://golden/schedules/week-23feb-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/preference-ceiling-scorer.ts"
+
+  - description: "Week 23 Feb — fairness_optimised — 30 rules"
+    vars:
+      task_type: schedule_generation
+      variationType: fairness_optimised
+      ruleCount: "30"
+      input: "file://golden/schedules/week-23feb.json"
+      reference: "file://golden/schedules/week-23feb-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/preference-ceiling-scorer.ts"
+
+outputPath: evals/results/preference-ceiling.json
+
+defaultTest:
+  options:
+    transformVars: "file://transforms/inject-preference-rules.js"
+    transform: "file://transforms/staff-grouped-to-slots.js"

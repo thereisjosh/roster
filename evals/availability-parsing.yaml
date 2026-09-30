@@ -1,0 +1,95 @@
+# Availability parsing eval — 2 providers × 6 tests = 12 combos
+# Run: npm run eval:parsing
+
+description: "Availability Parsing"
+
+prompts:
+  - id: availability-parsing
+    label: "Availability Parsing"
+    raw: "file://prompts/availability-parsing.txt"
+
+providers:
+  - id: openai:gpt-4.1-mini
+    label: "GPT-4.1-mini"
+    config:
+      temperature: 0
+  - id: anthropic:messages:claude-haiku-4-5-20251001
+    label: "Claude Haiku 4.5"
+    config:
+      temperature: 0
+      max_tokens: 4096
+
+tests:
+  # --- Simple English cases (from simple-availability.json) ---
+  - description: "Simple — weekday range with days off"
+    vars:
+      task_type: nl_availability_parsing
+      input: "I can work Monday to Wednesday. Thursday and Friday I'm off."
+      expected: |
+        {"entries":[{"day":"monday","available":true},{"day":"tuesday","available":true},{"day":"wednesday","available":true},{"day":"thursday","available":false},{"day":"friday","available":false}]}
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/parsing-scorer.ts"
+
+  - description: "Simple — specific hours on specific days"
+    vars:
+      task_type: nl_availability_parsing
+      input: "Available 9am to 5pm on Tuesday and Thursday. Rest of the week I cannot."
+      expected: |
+        {"entries":[{"day":"monday","available":false},{"day":"tuesday","available":true,"startTime":"09:00","endTime":"17:00"},{"day":"wednesday","available":false},{"day":"thursday","available":true,"startTime":"09:00","endTime":"17:00"},{"day":"friday","available":false},{"day":"saturday","available":false},{"day":"sunday","available":false}]}
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/parsing-scorer.ts"
+
+  - description: "Simple — all week except one day"
+    vars:
+      task_type: nl_availability_parsing
+      input: "Next week all good except Saturday, got family event"
+      expected: |
+        {"entries":[{"day":"monday","available":true},{"day":"tuesday","available":true},{"day":"wednesday","available":true},{"day":"thursday","available":true},{"day":"friday","available":true},{"day":"saturday","available":false,"reason":"family event"},{"day":"sunday","available":true}]}
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/parsing-scorer.ts"
+
+  # --- Singlish cases (from singlish-availability.json) ---
+  - description: "Singlish — weekday range with MC"
+    vars:
+      task_type: nl_availability_parsing
+      input: "Mon to Wed can lah. Thu got MC so cannot. Fri onwards ok"
+      expected: |
+        {"entries":[{"day":"monday","available":true},{"day":"tuesday","available":true},{"day":"wednesday","available":true},{"day":"thursday","available":false,"reason":"MC"},{"day":"friday","available":true},{"day":"saturday","available":true},{"day":"sunday","available":true}]}
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/parsing-scorer.ts"
+
+  - description: "Singlish — weekend half-day morning only"
+    vars:
+      task_type: nl_availability_parsing
+      input: "Sat n Sun can work half day only, morning shift. Weekday all ok"
+      expected: |
+        {"entries":[{"day":"monday","available":true},{"day":"tuesday","available":true},{"day":"wednesday","available":true},{"day":"thursday","available":true},{"day":"friday","available":true},{"day":"saturday","available":true},{"day":"sunday","available":true}]}
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/parsing-scorer.ts"
+
+  - description: "Singlish — only two days available"
+    vars:
+      task_type: nl_availability_parsing
+      input: "Wah this week damn jialat. Only can do Tue and Wed la. The rest all taken already"
+      expected: |
+        {"entries":[{"day":"monday","available":false},{"day":"tuesday","available":true},{"day":"wednesday","available":true},{"day":"thursday","available":false},{"day":"friday","available":false},{"day":"saturday","available":false},{"day":"sunday","available":false}]}
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/parsing-scorer.ts"
+
+outputPath: evals/results/availability-parsing.json
+
+defaultTest:
+  options:
+    transform: "(() => { const s = output.replace(/^```(?:json)?\\s*\\n?/gm, '').replace(/\\n?\\s*```\\s*$/gm, '').trim(); const i = s.indexOf('{'); const j = s.lastIndexOf('}'); return (i !== -1 && j > i) ? s.substring(i, j + 1) : s; })()"

@@ -1,0 +1,42 @@
+{
+  "description": "Singlish/colloquial English availability messages",
+  "cases": [
+    {
+      "input": "Mon to Wed can lah. Thu got MC so cannot. Fri onwards ok",
+      "expected": {
+        "entries": [
+          { "day": "monday", "available": true },
+          { "day": "tuesday", "available": true },
+          { "day": "wednesday", "available": true },
+          { "day": "thursday", "available": false, "reason": "MC" },
+          { "day": "friday", "available": true },
+          { "day": "saturday", "available": true },
+          { "day": "sunday", "available": true }
+        ]
+      }
+    },
+    {
+      "input": "Sat n Sun can work half day only, morning shift. Weekday all ok",
+      "expected": {
+        "entries": [
+          { "day": "monday", "available": true },
+          { "day": "tuesday", "available": true },
+          { "day": "wednesday", "available": true },
+          { "day": "thursday", "available": true },
+          { "day": "friday", "available": true },
+          { "day": "saturday", "available": true, "startTime": "07:00", "endTime": "15:00" },
+          { "day": "sunday", "available": true, "startTime": "07:00", "endTime": "15:00" }
+        ]
+      }
+    },
+    {
+      "input": "Wah this week damn jialat. Only can do Tue and Wed la. The rest all taken already",
+      "expected": {
+        "entries": [
+          { "day": "tuesday", "available": true },
+          { "day": "wednesday", "available": true }
+        ]
+      }
+    }
+  ]
+}

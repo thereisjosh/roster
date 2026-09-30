@@ -1,0 +1,30 @@
+{
+  "removePreferenceRules": [
+    "Level 1 (L1) staff must always be paired with a Level 2 (L2) or Manager on the same shift for supervision"
+  ],
+  "compositionRules": [
+    {
+      "shiftType": "barista",
+      "tag": "L2_or_above",
+      "minimumCount": 1,
+      "required": false,
+      "condition": { "whenTagPresent": "L1", "whenMinCount": 1 },
+      "sourceUtterance": "Junior (L1) baristas should be supervised by a senior (L2) or manager when possible"
+    }
+  ],
+  "staffSkills": [
+    { "staffId": "wilson", "tag": "L2_or_above", "proficiency": 4 },
+    { "staffId": "geri", "tag": "L2_or_above", "proficiency": 4 },
+    { "staffId": "kexin", "tag": "L2_or_above", "proficiency": 4 },
+    { "staffId": "keryn", "tag": "L2_or_above", "proficiency": 4 },
+    { "staffId": "elisabeth", "tag": "L2_or_above", "proficiency": 3 },
+    { "staffId": "hau", "tag": "L2_or_above", "proficiency": 5 },
+    { "staffId": "meiwah", "tag": "L2_or_above", "proficiency": 5 },
+    { "staffId": "junhui", "tag": "L1", "proficiency": 1 },
+    { "staffId": "jared", "tag": "L1", "proficiency": 1 },
+    { "staffId": "ariel", "tag": "L1", "proficiency": 1 },
+    { "staffId": "evelyn", "tag": "L1", "proficiency": 1 },
+    { "staffId": "sophie", "tag": "L1", "proficiency": 1 },
+    { "staffId": "htet", "tag": "L1", "proficiency": 1 }
+  ]
+}

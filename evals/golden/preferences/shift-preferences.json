@@ -1,0 +1,25 @@
+{
+  "description": "Preference extraction from conversation history",
+  "cases": [
+    {
+      "input": "Staff: I really prefer morning shifts, like 7 to 3. Afternoon can also but not so nice. And please don't put me on Saturday nights, I have church on Sunday morning.\n\nManager: Noted. How about working with the new guy Jason?\n\nStaff: Actually ah, I don't mind. But I prefer not to be paired with Karen, we always clash.",
+      "expected": {
+        "preferences": [
+          { "type": "shift_time", "rule": { "field": "time", "operator": "prefer", "value": "07:00-15:00" } },
+          { "type": "shift_time", "rule": { "field": "time", "operator": "avoid", "value": "saturday_night" } },
+          { "type": "coworker", "rule": { "field": "coworker", "operator": "avoid", "value": "Karen" } }
+        ]
+      }
+    },
+    {
+      "input": "I can only work maximum 3 days a week because I'm studying part-time. Preferably Tuesday, Wednesday, Thursday. Morning shifts are better for me because I have class at night.",
+      "expected": {
+        "preferences": [
+          { "type": "hours", "rule": { "field": "hours", "operator": "max", "value": 3 } },
+          { "type": "day_off", "rule": { "field": "day", "operator": "prefer", "value": "tue,wed,thu" } },
+          { "type": "shift_time", "rule": { "field": "time", "operator": "prefer", "value": "morning" } }
+        ]
+      }
+    }
+  ]
+}

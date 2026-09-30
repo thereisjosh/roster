@@ -1,0 +1,118 @@
+# Schedule generation eval — Claude models comparison
+# Run: npm run eval:schedule:claude
+
+description: "Schedule Generation — Claude Models"
+
+prompts:
+  - id: schedule-generation
+    label: "Schedule Generation"
+    raw: "file://prompts/schedule-generation.txt"
+
+providers:
+  - id: anthropic:messages:claude-sonnet-4-5-20250929
+    label: "Claude Sonnet 4.5"
+    config:
+      temperature: 0
+      max_tokens: 16384
+  - id: anthropic:messages:claude-sonnet-4-6-20250514
+    label: "Claude Sonnet 4.6"
+    config:
+      temperature: 0
+      max_tokens: 16384
+  - id: anthropic:messages:claude-haiku-4-5-20251001
+    label: "Claude Haiku 4.5"
+    config:
+      temperature: 0
+      max_tokens: 16384
+
+tests:
+  - description: "Real cafe week — 23 Feb standard staffing"
+    vars:
+      task_type: schedule_generation
+      input: "file://golden/schedules/week-23feb.json"
+      reference: "file://golden/schedules/week-23feb-expected-output.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/schedule-scorer.ts"
+      - type: javascript
+        value: "file://scorers/reference-scorer.ts"
+      - type: javascript
+        value: "file://scorers/schedule-judge.ts"
+
+  - description: "Real cafe week — 2 Mar standard staffing"
+    vars:
+      task_type: schedule_generation
+      input: "file://golden/schedules/week-2mar.json"
+      reference: "file://golden/schedules/week-2mar-expected-output.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/schedule-scorer.ts"
+      - type: javascript
+        value: "file://scorers/reference-scorer.ts"
+      - type: javascript
+        value: "file://scorers/schedule-judge.ts"
+
+  - description: "Real cafe week — 9 Mar reduced chef coverage"
+    vars:
+      task_type: schedule_generation
+      input: "file://golden/schedules/week-9mar.json"
+      reference: "file://golden/schedules/week-9mar-expected-output.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/schedule-scorer.ts"
+      - type: javascript
+        value: "file://scorers/reference-scorer.ts"
+      - type: javascript
+        value: "file://scorers/schedule-judge.ts"
+
+  - description: "Real cafe week — 16 Mar public holiday Saturday"
+    vars:
+      task_type: schedule_generation
+      input: "file://golden/schedules/week-16mar.json"
+      reference: "file://golden/schedules/week-16mar-expected-output.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/schedule-scorer.ts"
+      - type: javascript
+        value: "file://scorers/reference-scorer.ts"
+      - type: javascript
+        value: "file://scorers/schedule-judge.ts"
+
+  - description: "Real cafe week — 23 Mar standard staffing"
+    vars:
+      task_type: schedule_generation
+      input: "file://golden/schedules/week-23mar.json"
+      reference: "file://golden/schedules/week-23mar-expected-output.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/schedule-scorer.ts"
+      - type: javascript
+        value: "file://scorers/reference-scorer.ts"
+      - type: javascript
+        value: "file://scorers/schedule-judge.ts"
+
+  - description: "Real cafe week — 30 Mar public holiday"
+    vars:
+      task_type: schedule_generation
+      input: "file://golden/schedules/week-30mar.json"
+      reference: "file://golden/schedules/week-30mar-expected-output.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/schedule-scorer.ts"
+      - type: javascript
+        value: "file://scorers/reference-scorer.ts"
+      - type: javascript
+        value: "file://scorers/schedule-judge.ts"
+
+outputPath: evals/results/schedule-generation-claude.json
+
+defaultTest:
+  options:
+    transformVars: "file://transforms/compute-eligibility.js"
+    transform: "(() => { const s = output.replace(/^```(?:json)?\\s*\\n?/gm, '').replace(/\\n?\\s*```\\s*$/gm, '').trim(); const i = s.indexOf('{'); const j = s.lastIndexOf('}'); return (i !== -1 && j > i) ? s.substring(i, j + 1) : s; })()"

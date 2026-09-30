@@ -1,0 +1,141 @@
+# Classification eval — 1 provider × 9 tests = 9 combos
+# Run: npm run eval:classification
+
+description: "Intent Classification"
+
+prompts:
+  - id: classification
+    label: "Intent Classification"
+    raw: "file://prompts/classification.txt"
+
+providers:
+  - id: openai:gpt-4.1-nano
+    label: "GPT-4.1-nano"
+    config:
+      temperature: 0
+
+tests:
+  # --- Availability update intents (from availability-intents.json) ---
+  - description: "Availability — wedding on Saturday"
+    vars:
+      task_type: classification
+      input: "I cannot work this Saturday, got wedding to attend"
+      expected_intent: availability_update
+    assert:
+      - type: is-json
+      - type: javascript
+        value: |
+          const result = JSON.parse(output);
+          const expected = context.vars.expected_intent;
+          return result.intent === expected ? { pass: true, score: 1.0, reason: 'Matched' } : { pass: false, score: 0.0, reason: `Expected ${expected}, got ${result.intent}` };
+
+  - description: "Availability — MC today"
+    vars:
+      task_type: classification
+      input: "MC today, not feeling well"
+      expected_intent: availability_update
+    assert:
+      - type: is-json
+      - type: javascript
+        value: |
+          const result = JSON.parse(output);
+          const expected = context.vars.expected_intent;
+          return result.intent === expected ? { pass: true, score: 1.0, reason: 'Matched' } : { pass: false, score: 0.0, reason: `Expected ${expected}, got ${result.intent}` };
+
+  - description: "Availability — full week available"
+    vars:
+      task_type: classification
+      input: "Next week Monday to Friday all can"
+      expected_intent: availability_update
+    assert:
+      - type: is-json
+      - type: javascript
+        value: |
+          const result = JSON.parse(output);
+          const expected = context.vars.expected_intent;
+          return result.intent === expected ? { pass: true, score: 1.0, reason: 'Matched' } : { pass: false, score: 0.0, reason: `Expected ${expected}, got ${result.intent}` };
+
+  - description: "Availability — taking leave"
+    vars:
+      task_type: classification
+      input: "Taking leave on 15th and 16th Jan"
+      expected_intent: availability_update
+    assert:
+      - type: is-json
+      - type: javascript
+        value: |
+          const result = JSON.parse(output);
+          const expected = context.vars.expected_intent;
+          return result.intent === expected ? { pass: true, score: 1.0, reason: 'Matched' } : { pass: false, score: 0.0, reason: `Expected ${expected}, got ${result.intent}` };
+
+  - description: "Availability — kid sick"
+    vars:
+      task_type: classification
+      input: "Sorry boss, kid sick so tomorrow cannot come in"
+      expected_intent: availability_update
+    assert:
+      - type: is-json
+      - type: javascript
+        value: |
+          const result = JSON.parse(output);
+          const expected = context.vars.expected_intent;
+          return result.intent === expected ? { pass: true, score: 1.0, reason: 'Matched' } : { pass: false, score: 0.0, reason: `Expected ${expected}, got ${result.intent}` };
+
+  # --- Swap request intents (from swap-intents.json) ---
+  - description: "Swap — Tuesday for Thursday with Ben"
+    vars:
+      task_type: classification
+      input: "Can I swap my Tuesday shift with Ben's Thursday shift?"
+      expected_intent: swap_request
+    assert:
+      - type: is-json
+      - type: javascript
+        value: |
+          const result = JSON.parse(output);
+          const expected = context.vars.expected_intent;
+          return result.intent === expected ? { pass: true, score: 1.0, reason: 'Matched' } : { pass: false, score: 0.0, reason: `Expected ${expected}, got ${result.intent}` };
+
+  - description: "Swap — trade Saturday dinner for Sunday lunch"
+    vars:
+      task_type: classification
+      input: "Anyone want to trade Saturday dinner for my Sunday lunch?"
+      expected_intent: swap_request
+    assert:
+      - type: is-json
+      - type: javascript
+        value: |
+          const result = JSON.parse(output);
+          const expected = context.vars.expected_intent;
+          return result.intent === expected ? { pass: true, score: 1.0, reason: 'Matched' } : { pass: false, score: 0.0, reason: `Expected ${expected}, got ${result.intent}` };
+
+  - description: "Swap — switch shifts with Aisha"
+    vars:
+      task_type: classification
+      input: "Me and Aisha want to switch our shifts on Friday"
+      expected_intent: swap_request
+    assert:
+      - type: is-json
+      - type: javascript
+        value: |
+          const result = JSON.parse(output);
+          const expected = context.vars.expected_intent;
+          return result.intent === expected ? { pass: true, score: 1.0, reason: 'Matched' } : { pass: false, score: 0.0, reason: `Expected ${expected}, got ${result.intent}` };
+
+  - description: "Swap — exchange morning for afternoon with Clara"
+    vars:
+      task_type: classification
+      input: "Is it possible to exchange my morning shift with Clara's afternoon?"
+      expected_intent: swap_request
+    assert:
+      - type: is-json
+      - type: javascript
+        value: |
+          const result = JSON.parse(output);
+          const expected = context.vars.expected_intent;
+          return result.intent === expected ? { pass: true, score: 1.0, reason: 'Matched' } : { pass: false, score: 0.0, reason: `Expected ${expected}, got ${result.intent}` };
+
+outputPath: evals/results/classification.json
+
+defaultTest:
+  options:
+    transform: "(() => { const s = output.replace(/^```(?:json)?\\s*\\n?/gm, '').replace(/\\n?\\s*```\\s*$/gm, '').trim(); const i = s.indexOf('{'); const j = s.lastIndexOf('}'); return (i !== -1 && j > i) ? s.substring(i, j + 1) : s; })()"

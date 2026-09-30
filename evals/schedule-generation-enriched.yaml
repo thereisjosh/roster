@@ -1,0 +1,221 @@
+# Schedule generation eval — baseline vs enriched context (compressed slot input)
+# Compares whether injecting preference rules, relationships, and skills
+# produces schedules closer to the golden (manager-approved) output.
+#
+# Run: npx promptfoo eval -c evals/schedule-generation-enriched.yaml
+
+description: "Schedule Generation — Baseline vs Enriched Context (Compressed)"
+
+prompts:
+  - id: schedule-generation-compressed
+    label: "Schedule Generation (Compressed)"
+    raw: "file://prompts/schedule-generation-compressed.txt"
+
+providers:
+  - id: "file://./providers/structured-output-provider.ts"
+    label: "Claude Sonnet 4.6 (Structured Output)"
+    config:
+      model: "claude-sonnet-4-6"
+      temperature: 0
+      max_tokens: 16384
+
+tests:
+  # --- BASELINE (no enriched context) ---
+  - description: "BASELINE — 23 Feb"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      input: "file://golden/schedules/week-23feb.json"
+      reference: "file://golden/schedules/week-23feb-expected-slots.json"
+      variant: baseline
+    options:
+      transformVars: "file://transforms/compute-eligibility-compressed.js"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "BASELINE — 2 Mar"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      input: "file://golden/schedules/week-2mar.json"
+      reference: "file://golden/schedules/week-2mar-expected-slots.json"
+      variant: baseline
+    options:
+      transformVars: "file://transforms/compute-eligibility-compressed.js"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "BASELINE — 9 Mar"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      input: "file://golden/schedules/week-9mar.json"
+      reference: "file://golden/schedules/week-9mar-expected-slots.json"
+      variant: baseline
+    options:
+      transformVars: "file://transforms/compute-eligibility-compressed.js"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "BASELINE — 16 Mar"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      input: "file://golden/schedules/week-16mar.json"
+      reference: "file://golden/schedules/week-16mar-expected-slots.json"
+      variant: baseline
+    options:
+      transformVars: "file://transforms/compute-eligibility-compressed.js"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "BASELINE — 23 Mar"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      input: "file://golden/schedules/week-23mar.json"
+      reference: "file://golden/schedules/week-23mar-expected-slots.json"
+      variant: baseline
+    options:
+      transformVars: "file://transforms/compute-eligibility-compressed.js"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "BASELINE — 30 Mar"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      input: "file://golden/schedules/week-30mar.json"
+      reference: "file://golden/schedules/week-30mar-expected-slots.json"
+      variant: baseline
+    options:
+      transformVars: "file://transforms/compute-eligibility-compressed.js"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  # --- ENRICHED (with preferences, relationships, skills, composition rules) ---
+  - description: "ENRICHED — 23 Feb"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      input: "file://golden/schedules/week-23feb.json"
+      reference: "file://golden/schedules/week-23feb-expected-slots.json"
+      variant: enriched
+    options:
+      transformVars: "file://transforms/inject-enriched-context-compressed.js"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "ENRICHED — 2 Mar"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      input: "file://golden/schedules/week-2mar.json"
+      reference: "file://golden/schedules/week-2mar-expected-slots.json"
+      variant: enriched
+    options:
+      transformVars: "file://transforms/inject-enriched-context-compressed.js"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "ENRICHED — 9 Mar"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      input: "file://golden/schedules/week-9mar.json"
+      reference: "file://golden/schedules/week-9mar-expected-slots.json"
+      variant: enriched
+    options:
+      transformVars: "file://transforms/inject-enriched-context-compressed.js"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "ENRICHED — 16 Mar"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      input: "file://golden/schedules/week-16mar.json"
+      reference: "file://golden/schedules/week-16mar-expected-slots.json"
+      variant: enriched
+    options:
+      transformVars: "file://transforms/inject-enriched-context-compressed.js"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "ENRICHED — 23 Mar"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      input: "file://golden/schedules/week-23mar.json"
+      reference: "file://golden/schedules/week-23mar-expected-slots.json"
+      variant: enriched
+    options:
+      transformVars: "file://transforms/inject-enriched-context-compressed.js"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "ENRICHED — 30 Mar"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      input: "file://golden/schedules/week-30mar.json"
+      reference: "file://golden/schedules/week-30mar-expected-slots.json"
+      variant: enriched
+    options:
+      transformVars: "file://transforms/inject-enriched-context-compressed.js"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+outputPath: evals/results/schedule-generation-enriched.json
+
+defaultTest:
+  options:
+    transform: "file://transforms/staff-grouped-to-slots.js"

@@ -1,0 +1,180 @@
+{
+  "assignments": [
+    {
+      "shiftId": "2026-03-30-barista-11:00",
+      "staffId": "wilson",
+      "startTime": "11:00",
+      "endTime": "16:00"
+    },
+    {
+      "shiftId": "2026-03-30-barista-11:00",
+      "staffId": "odelia",
+      "startTime": "11:00",
+      "endTime": "16:00"
+    },
+    {
+      "shiftId": "2026-03-30-barista-15:00",
+      "staffId": "clemens"
+    },
+    {
+      "shiftId": "2026-03-30-barista-15:00",
+      "staffId": "kexin"
+    },
+    {
+      "shiftId": "2026-03-30-chef-11:00",
+      "staffId": "hau",
+      "startTime": "12:00",
+      "endTime": "20:30"
+    },
+    {
+      "shiftId": "2026-03-30-chef-11:00",
+      "staffId": "meiwah",
+      "startTime": "11:00",
+      "endTime": "20:00"
+    },
+    {
+      "shiftId": "2026-04-01-barista-11:00",
+      "staffId": "geri",
+      "startTime": "11:00",
+      "endTime": "16:00"
+    },
+    {
+      "shiftId": "2026-04-01-barista-11:00",
+      "staffId": "wilson",
+      "startTime": "11:00",
+      "endTime": "16:00"
+    },
+    {
+      "shiftId": "2026-04-01-barista-15:00",
+      "staffId": "keryn"
+    },
+    {
+      "shiftId": "2026-04-01-barista-15:00",
+      "staffId": "kexin"
+    },
+    {
+      "shiftId": "2026-04-01-chef-11:00",
+      "staffId": "hau",
+      "startTime": "11:00",
+      "endTime": "20:30"
+    },
+    {
+      "shiftId": "2026-04-01-chef-11:00",
+      "staffId": "meiwah",
+      "startTime": "13:00",
+      "endTime": "20:00"
+    },
+    {
+      "shiftId": "2026-04-02-barista-11:00",
+      "staffId": "wilson",
+      "startTime": "11:00",
+      "endTime": "16:00"
+    },
+    {
+      "shiftId": "2026-04-02-barista-15:00",
+      "staffId": "keryn"
+    },
+    {
+      "shiftId": "2026-04-02-barista-15:00",
+      "staffId": "kexin"
+    },
+    {
+      "shiftId": "2026-04-02-chef-11:00",
+      "staffId": "hau",
+      "startTime": "12:00",
+      "endTime": "20:00"
+    },
+    {
+      "shiftId": "2026-04-02-chef-11:00",
+      "staffId": "meiwah",
+      "startTime": "11:00",
+      "endTime": "20:30"
+    },
+    {
+      "shiftId": "2026-04-03-barista-11:00",
+      "staffId": "wilson",
+      "startTime": "11:00",
+      "endTime": "16:00"
+    },
+    {
+      "shiftId": "2026-04-03-barista-15:00",
+      "staffId": "elynn"
+    },
+    {
+      "shiftId": "2026-04-03-barista-15:00",
+      "staffId": "junhui"
+    },
+    {
+      "shiftId": "2026-04-03-chef-11:00",
+      "staffId": "hau",
+      "startTime": "11:00",
+      "endTime": "20:30"
+    },
+    {
+      "shiftId": "2026-04-03-chef-11:00",
+      "staffId": "meiwah",
+      "startTime": "12:00",
+      "endTime": "20:30"
+    },
+    {
+      "shiftId": "2026-04-04-barista-09:00",
+      "staffId": "clemens",
+      "startTime": "10:00",
+      "endTime": "16:00"
+    },
+    {
+      "shiftId": "2026-04-04-barista-09:00",
+      "staffId": "matteus",
+      "startTime": "09:00",
+      "endTime": "16:00"
+    },
+    {
+      "shiftId": "2026-04-04-barista-15:00",
+      "staffId": "keryn"
+    },
+    {
+      "shiftId": "2026-04-04-barista-15:00",
+      "staffId": "yingen"
+    },
+    {
+      "shiftId": "2026-04-04-chef-09:00",
+      "staffId": "hau",
+      "startTime": "11:00",
+      "endTime": "20:30"
+    },
+    {
+      "shiftId": "2026-04-04-chef-09:00",
+      "staffId": "meiwah",
+      "startTime": "09:00",
+      "endTime": "20:00"
+    },
+    {
+      "shiftId": "2026-04-05-barista-09:00",
+      "staffId": "kexin",
+      "startTime": "09:00",
+      "endTime": "16:00"
+    },
+    {
+      "shiftId": "2026-04-05-barista-09:00",
+      "staffId": "ulfah",
+      "startTime": "09:00",
+      "endTime": "16:00"
+    },
+    {
+      "shiftId": "2026-04-05-barista-15:00",
+      "staffId": "matteus"
+    },
+    {
+      "shiftId": "2026-04-05-chef-09:00",
+      "staffId": "hau",
+      "startTime": "09:00",
+      "endTime": "20:00"
+    },
+    {
+      "shiftId": "2026-04-05-chef-09:00",
+      "staffId": "meiwah",
+      "startTime": "09:30",
+      "endTime": "20:30"
+    }
+  ]
+}

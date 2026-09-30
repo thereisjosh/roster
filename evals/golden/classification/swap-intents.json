@@ -1,0 +1,9 @@
+{
+  "description": "Swap request intent classification",
+  "cases": [
+    { "input": "Can I swap my Tuesday shift with Ben's Thursday shift?", "expected_intent": "swap_request" },
+    { "input": "Anyone want to trade Saturday dinner for my Sunday lunch?", "expected_intent": "swap_request" },
+    { "input": "Me and Aisha want to switch our shifts on Friday", "expected_intent": "swap_request" },
+    { "input": "Is it possible to exchange my morning shift with Clara's afternoon?", "expected_intent": "swap_request" }
+  ]
+}

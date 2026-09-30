@@ -1,0 +1,215 @@
+{
+  "description": "30 realistic cafe preference rules for ceiling eval — 10 structural-hard, 10 structural-soft, 10 semantic-soft",
+  "rules": [
+    {
+      "id": "sh-01",
+      "ruleText": "Level 1 (L1) staff must always be paired with a Level 2 (L2) or Manager on the same shift for supervision",
+      "ruleType": "hard",
+      "confidence": 1.0,
+      "category": "structural-hard"
+    },
+    {
+      "id": "sh-02",
+      "ruleText": "No staff member may work more than 6 consecutive days without a rest day",
+      "ruleType": "hard",
+      "confidence": 1.0,
+      "category": "structural-hard"
+    },
+    {
+      "id": "sh-03",
+      "ruleText": "Minimum 10 hours rest between the end of one shift and the start of the next",
+      "ruleType": "hard",
+      "confidence": 1.0,
+      "category": "structural-hard"
+    },
+    {
+      "id": "sh-04",
+      "ruleText": "At least one chef must be scheduled during every kitchen-open slot",
+      "ruleType": "hard",
+      "confidence": 1.0,
+      "category": "structural-hard"
+    },
+    {
+      "id": "sh-05",
+      "ruleText": "Full-time staff must be scheduled for at least 2 weekend shifts per week",
+      "ruleType": "hard",
+      "confidence": 1.0,
+      "category": "structural-hard"
+    },
+    {
+      "id": "sh-06",
+      "ruleText": "No staff member may be scheduled for both opening (before 10:00) and closing (after 20:00) on the same day",
+      "ruleType": "hard",
+      "confidence": 1.0,
+      "category": "structural-hard"
+    },
+    {
+      "id": "sh-07",
+      "ruleText": "Part-time staff may not exceed 25 hours per week",
+      "ruleType": "hard",
+      "confidence": 1.0,
+      "category": "structural-hard"
+    },
+    {
+      "id": "sh-08",
+      "ruleText": "A minimum of 2 baristas must be on shift at all times during operating hours",
+      "ruleType": "hard",
+      "confidence": 1.0,
+      "category": "structural-hard"
+    },
+    {
+      "id": "sh-09",
+      "ruleText": "No staff member may be scheduled for more than 10 hours in a single day",
+      "ruleType": "hard",
+      "confidence": 1.0,
+      "category": "structural-hard"
+    },
+    {
+      "id": "sh-10",
+      "ruleText": "Staff on approved leave must not be scheduled for any shifts during their leave period",
+      "ruleType": "hard",
+      "confidence": 1.0,
+      "category": "structural-hard"
+    },
+    {
+      "id": "ss-01",
+      "ruleText": "During peak lunch period (11:30-14:00), prioritise having more staff on shift",
+      "ruleType": "soft",
+      "confidence": 0.9,
+      "category": "structural-soft"
+    },
+    {
+      "id": "ss-02",
+      "ruleText": "During peak dinner period (18:00-20:30), prioritise having more staff on shift",
+      "ruleType": "soft",
+      "confidence": 0.85,
+      "category": "structural-soft"
+    },
+    {
+      "id": "ss-03",
+      "ruleText": "Prefer scheduling senior (L2) staff during peak hours for better customer service",
+      "ruleType": "soft",
+      "confidence": 0.8,
+      "category": "structural-soft"
+    },
+    {
+      "id": "ss-04",
+      "ruleText": "Avoid scheduling the same staff member for closing shift followed by opening shift the next day",
+      "ruleType": "soft",
+      "confidence": 0.75,
+      "category": "structural-soft"
+    },
+    {
+      "id": "ss-05",
+      "ruleText": "Pair newer (L1) baristas with experienced (L2) baristas when possible for mentoring",
+      "ruleType": "soft",
+      "confidence": 0.7,
+      "category": "structural-soft"
+    },
+    {
+      "id": "ss-06",
+      "ruleText": "Weekend shifts should have at least one more staff member than weekday minimums",
+      "ruleType": "soft",
+      "confidence": 0.8,
+      "category": "structural-soft"
+    },
+    {
+      "id": "ss-07",
+      "ruleText": "Prefer giving part-time staff consistent shift times across the week",
+      "ruleType": "soft",
+      "confidence": 0.65,
+      "category": "structural-soft"
+    },
+    {
+      "id": "ss-08",
+      "ruleText": "Avoid scheduling more than 3 L1 staff together without an L2 present",
+      "ruleType": "soft",
+      "confidence": 0.7,
+      "category": "structural-soft"
+    },
+    {
+      "id": "ss-09",
+      "ruleText": "Prefer keeping morning shifts (before 12:00) staffed by the same team throughout the week for continuity",
+      "ruleType": "soft",
+      "confidence": 0.6,
+      "category": "structural-soft"
+    },
+    {
+      "id": "ss-10",
+      "ruleText": "Try to schedule at least one staff member who worked the previous day's closing shift for the next day's opening, for handover continuity",
+      "ruleType": "soft",
+      "confidence": 0.55,
+      "category": "structural-soft"
+    },
+    {
+      "id": "se-01",
+      "ruleText": "Distribute weekend shifts fairly across all staff — no one should have significantly more weekend work than others",
+      "ruleType": "soft",
+      "confidence": 0.85,
+      "category": "semantic-soft"
+    },
+    {
+      "id": "se-02",
+      "ruleText": "Rotate closing shifts evenly — avoid repeatedly assigning the same person to close",
+      "ruleType": "soft",
+      "confidence": 0.8,
+      "category": "semantic-soft"
+    },
+    {
+      "id": "se-03",
+      "ruleText": "Give L1 staff exposure to different shift types (morning, lunch, dinner) for learning breadth",
+      "ruleType": "soft",
+      "confidence": 0.7,
+      "category": "semantic-soft"
+    },
+    {
+      "id": "se-04",
+      "ruleText": "Balance total hours across staff of the same employment type to avoid burnout",
+      "ruleType": "soft",
+      "confidence": 0.9,
+      "category": "semantic-soft"
+    },
+    {
+      "id": "se-05",
+      "ruleText": "Prefer not to schedule the same two people together every single shift — vary team composition",
+      "ruleType": "soft",
+      "confidence": 0.6,
+      "category": "semantic-soft"
+    },
+    {
+      "id": "se-06",
+      "ruleText": "When possible, honour staff time-of-day preferences (e.g., some prefer mornings, others evenings)",
+      "ruleType": "soft",
+      "confidence": 0.75,
+      "category": "semantic-soft"
+    },
+    {
+      "id": "se-07",
+      "ruleText": "Distribute the least desirable shifts (early mornings, late nights) equitably rather than loading them onto junior staff",
+      "ruleType": "soft",
+      "confidence": 0.8,
+      "category": "semantic-soft"
+    },
+    {
+      "id": "se-08",
+      "ruleText": "Where schedules are tight, prioritise filling coverage gaps over soft preferences",
+      "ruleType": "soft",
+      "confidence": 0.95,
+      "category": "semantic-soft"
+    },
+    {
+      "id": "se-09",
+      "ruleText": "Avoid giving any single staff member all the public-holiday shifts in a month — rotate holiday coverage",
+      "ruleType": "soft",
+      "confidence": 0.7,
+      "category": "semantic-soft"
+    },
+    {
+      "id": "se-10",
+      "ruleText": "Consider staff commute constraints — prefer assigning staff to shifts that start/end within their stated availability windows rather than right at the boundary",
+      "ruleType": "soft",
+      "confidence": 0.5,
+      "category": "semantic-soft"
+    }
+  ]
+}

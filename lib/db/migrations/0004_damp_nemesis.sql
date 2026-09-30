@@ -1,0 +1,1 @@
+ALTER TYPE "public"."cover_request_status" ADD VALUE 'cancelled';

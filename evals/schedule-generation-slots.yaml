@@ -1,0 +1,84 @@
+# Slot-based schedule generation eval — slot input → LLM → slot output → slot scorer
+# Run: npm run eval:schedule:slots
+
+description: "Schedule Generation (Slot Input)"
+
+prompts:
+  - id: schedule-generation
+    label: "Schedule Generation"
+    raw: "file://prompts/schedule-generation.txt"
+
+providers:
+  - id: anthropic:messages:claude-sonnet-4-5-20250929
+    label: "Claude Sonnet 4.5"
+    config:
+      temperature: 0
+      max_tokens: 16384
+
+tests:
+  - description: "Real cafe week — 23 Feb (slot input)"
+    vars:
+      task_type: schedule_generation
+      input: "file://golden/schedules/week-23feb.json"
+      reference: "file://golden/schedules/week-23feb-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+
+  - description: "Real cafe week — 2 Mar (slot input)"
+    vars:
+      task_type: schedule_generation
+      input: "file://golden/schedules/week-2mar.json"
+      reference: "file://golden/schedules/week-2mar-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+
+  - description: "Real cafe week — 9 Mar (slot input)"
+    vars:
+      task_type: schedule_generation
+      input: "file://golden/schedules/week-9mar.json"
+      reference: "file://golden/schedules/week-9mar-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+
+  - description: "Real cafe week — 16 Mar (slot input)"
+    vars:
+      task_type: schedule_generation
+      input: "file://golden/schedules/week-16mar.json"
+      reference: "file://golden/schedules/week-16mar-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+
+  - description: "Real cafe week — 23 Mar (slot input)"
+    vars:
+      task_type: schedule_generation
+      input: "file://golden/schedules/week-23mar.json"
+      reference: "file://golden/schedules/week-23mar-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+
+  - description: "Real cafe week — 30 Mar (slot input)"
+    vars:
+      task_type: schedule_generation
+      input: "file://golden/schedules/week-30mar.json"
+      reference: "file://golden/schedules/week-30mar-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+
+outputPath: evals/results/schedule-generation-slots.json
+
+defaultTest:
+  options:
+    transformVars: "file://transforms/compute-eligibility-slots.js"
+    transform: "file://transforms/shift-to-slots.js"

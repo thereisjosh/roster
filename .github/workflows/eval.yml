@@ -1,0 +1,99 @@
+name: Eval Suite
+
+on:
+  pull_request:
+    paths:
+      - 'evals/prompts/**'
+      - 'evals/golden/**'
+      - 'evals/scorers/**'
+      - 'evals/*.yaml'
+      - 'lib/llm/**'
+  schedule:
+    # Nightly at 3am UTC — regression detection
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+    inputs:
+      extended:
+        description: 'Run extended edge case tests (for model upgrades)'
+        type: boolean
+        default: false
+
+env:
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+  GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Run eval suite
+        run: npm run eval:ci
+
+      - name: Check pass rate
+        run: |
+          PASS_RATE=$(node -e "
+            const fs = require('fs');
+            const path = require('path');
+            const dir = './evals/results';
+            const files = fs.readdirSync(dir).filter(f => f.endsWith('.json'));
+            let total = 0, passed = 0;
+            for (const f of files) {
+              const data = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf-8'));
+              total += data.results.results.length;
+              passed += data.results.results.filter(t => t.success).length;
+            }
+            const rate = (passed / total * 100).toFixed(1);
+            console.log(rate);
+            if (parseFloat(rate) < 85) process.exit(1);
+          ")
+          echo "Pass rate: ${PASS_RATE}%"
+
+      - name: Upload eval results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eval-results
+          path: evals/results/*.json
+
+  cost-report:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Generate weekly cost report
+        run: |
+          node -e "
+            const fs = require('fs');
+            const path = require('path');
+            const dir = './evals/results';
+            if (fs.existsSync(dir)) {
+              const files = fs.readdirSync(dir).filter(f => f.endsWith('.json'));
+              let totalCost = 0;
+              for (const f of files) {
+                const data = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf-8'));
+                totalCost += data.results.results.reduce((sum, t) => sum + (t.cost || 0), 0);
+              }
+              console.log('Weekly eval cost: \$' + totalCost.toFixed(4));
+            }
+          "

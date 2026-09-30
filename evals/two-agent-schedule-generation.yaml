@@ -1,0 +1,129 @@
+# Two-agent schedule generation eval — 4 combos × 6 tests = 24 cases
+# Run: npm run eval:two-agent
+
+description: "Two-Agent Schedule Generation"
+
+prompts:
+  - id: two-agent-passthrough
+    label: "Two-Agent (prompt in provider)"
+    raw: "{{input}}"
+
+providers:
+  - id: "file://./providers/two-agent-provider.ts"
+    label: "B1: Gemini Pro → Gemini Pro"
+    config:
+      agent1Model: "gemini-2.5-pro"
+      agent2Model: "gemini-2.5-pro"
+      temperature: 0
+
+  - id: "file://./providers/two-agent-provider.ts"
+    label: "B2: Sonnet 4.5 → Sonnet 4.5"
+    config:
+      agent1Model: "claude-sonnet-4-5-20250929"
+      agent2Model: "claude-sonnet-4-5-20250929"
+      temperature: 0
+
+  - id: "file://./providers/two-agent-provider.ts"
+    label: "C1: Gemini Pro → Sonnet 4.5"
+    config:
+      agent1Model: "gemini-2.5-pro"
+      agent2Model: "claude-sonnet-4-5-20250929"
+      temperature: 0
+
+  - id: "file://./providers/two-agent-provider.ts"
+    label: "C4: Gemini Flash → Sonnet 4.5"
+    config:
+      agent1Model: "gemini-2.5-flash"
+      agent2Model: "claude-sonnet-4-5-20250929"
+      temperature: 0
+
+tests:
+  - description: "Real cafe week — 23 Feb standard staffing"
+    vars:
+      task_type: schedule_generation
+      input: "file://golden/schedules/week-23feb.json"
+      reference: "file://golden/schedules/week-23feb-expected-output.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/schedule-scorer.ts"
+      - type: javascript
+        value: "file://scorers/reference-scorer.ts"
+      - type: javascript
+        value: "file://scorers/schedule-judge.ts"
+
+  - description: "Real cafe week — 2 Mar standard staffing"
+    vars:
+      task_type: schedule_generation
+      input: "file://golden/schedules/week-2mar.json"
+      reference: "file://golden/schedules/week-2mar-expected-output.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/schedule-scorer.ts"
+      - type: javascript
+        value: "file://scorers/reference-scorer.ts"
+      - type: javascript
+        value: "file://scorers/schedule-judge.ts"
+
+  - description: "Real cafe week — 9 Mar reduced chef coverage"
+    vars:
+      task_type: schedule_generation
+      input: "file://golden/schedules/week-9mar.json"
+      reference: "file://golden/schedules/week-9mar-expected-output.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/schedule-scorer.ts"
+      - type: javascript
+        value: "file://scorers/reference-scorer.ts"
+      - type: javascript
+        value: "file://scorers/schedule-judge.ts"
+
+  - description: "Real cafe week — 16 Mar public holiday Saturday"
+    vars:
+      task_type: schedule_generation
+      input: "file://golden/schedules/week-16mar.json"
+      reference: "file://golden/schedules/week-16mar-expected-output.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/schedule-scorer.ts"
+      - type: javascript
+        value: "file://scorers/reference-scorer.ts"
+      - type: javascript
+        value: "file://scorers/schedule-judge.ts"
+
+  - description: "Real cafe week — 23 Mar standard staffing"
+    vars:
+      task_type: schedule_generation
+      input: "file://golden/schedules/week-23mar.json"
+      reference: "file://golden/schedules/week-23mar-expected-output.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/schedule-scorer.ts"
+      - type: javascript
+        value: "file://scorers/reference-scorer.ts"
+      - type: javascript
+        value: "file://scorers/schedule-judge.ts"
+
+  - description: "Real cafe week — 30 Mar public holiday"
+    vars:
+      task_type: schedule_generation
+      input: "file://golden/schedules/week-30mar.json"
+      reference: "file://golden/schedules/week-30mar-expected-output.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/schedule-scorer.ts"
+      - type: javascript
+        value: "file://scorers/reference-scorer.ts"
+      - type: javascript
+        value: "file://scorers/schedule-judge.ts"
+
+outputPath: evals/results/two-agent-schedule-generation.json
+
+defaultTest:
+  options:
+    transform: "(() => { const s = output.replace(/^```(?:json)?\\s*\\n?/gm, '').replace(/\\n?\\s*```\\s*$/gm, '').trim(); const i = s.indexOf('{'); const j = s.lastIndexOf('}'); return (i !== -1 && j > i) ? s.substring(i, j + 1) : s; })()"

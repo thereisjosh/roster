@@ -1,0 +1,1530 @@
+{
+  "slots": [
+    {
+      "slotId": "mon-barista-11",
+      "staffId": "keryn",
+      "date": "2026-03-02",
+      "hour": 11,
+      "role": "barista"
+    },
+    {
+      "slotId": "mon-chef-11",
+      "staffId": "meiwah",
+      "date": "2026-03-02",
+      "hour": 11,
+      "role": "chef"
+    },
+    {
+      "slotId": "mon-barista-12",
+      "staffId": "keryn",
+      "date": "2026-03-02",
+      "hour": 12,
+      "role": "barista"
+    },
+    {
+      "slotId": "mon-chef-12",
+      "staffId": "meiwah",
+      "date": "2026-03-02",
+      "hour": 12,
+      "role": "chef"
+    },
+    {
+      "slotId": "mon-barista-13",
+      "staffId": "keryn",
+      "date": "2026-03-02",
+      "hour": 13,
+      "role": "barista"
+    },
+    {
+      "slotId": "mon-chef-13",
+      "staffId": "hau",
+      "date": "2026-03-02",
+      "hour": 13,
+      "role": "chef"
+    },
+    {
+      "slotId": "mon-chef-13",
+      "staffId": "meiwah",
+      "date": "2026-03-02",
+      "hour": 13,
+      "role": "chef"
+    },
+    {
+      "slotId": "mon-barista-14",
+      "staffId": "keryn",
+      "date": "2026-03-02",
+      "hour": 14,
+      "role": "barista"
+    },
+    {
+      "slotId": "mon-chef-14",
+      "staffId": "hau",
+      "date": "2026-03-02",
+      "hour": 14,
+      "role": "chef"
+    },
+    {
+      "slotId": "mon-chef-14",
+      "staffId": "meiwah",
+      "date": "2026-03-02",
+      "hour": 14,
+      "role": "chef"
+    },
+    {
+      "slotId": "mon-chef-15",
+      "staffId": "hau",
+      "date": "2026-03-02",
+      "hour": 15,
+      "role": "chef"
+    },
+    {
+      "slotId": "mon-chef-15",
+      "staffId": "meiwah",
+      "date": "2026-03-02",
+      "hour": 15,
+      "role": "chef"
+    },
+    {
+      "slotId": "mon-barista-16",
+      "staffId": "geri",
+      "date": "2026-03-02",
+      "hour": 16,
+      "role": "barista"
+    },
+    {
+      "slotId": "mon-barista-16",
+      "staffId": "kexin",
+      "date": "2026-03-02",
+      "hour": 16,
+      "role": "barista"
+    },
+    {
+      "slotId": "mon-chef-16",
+      "staffId": "hau",
+      "date": "2026-03-02",
+      "hour": 16,
+      "role": "chef"
+    },
+    {
+      "slotId": "mon-chef-16",
+      "staffId": "meiwah",
+      "date": "2026-03-02",
+      "hour": 16,
+      "role": "chef"
+    },
+    {
+      "slotId": "mon-barista-17",
+      "staffId": "geri",
+      "date": "2026-03-02",
+      "hour": 17,
+      "role": "barista"
+    },
+    {
+      "slotId": "mon-barista-17",
+      "staffId": "kexin",
+      "date": "2026-03-02",
+      "hour": 17,
+      "role": "barista"
+    },
+    {
+      "slotId": "mon-chef-17",
+      "staffId": "hau",
+      "date": "2026-03-02",
+      "hour": 17,
+      "role": "chef"
+    },
+    {
+      "slotId": "mon-chef-17",
+      "staffId": "meiwah",
+      "date": "2026-03-02",
+      "hour": 17,
+      "role": "chef"
+    },
+    {
+      "slotId": "mon-barista-18",
+      "staffId": "geri",
+      "date": "2026-03-02",
+      "hour": 18,
+      "role": "barista"
+    },
+    {
+      "slotId": "mon-barista-18",
+      "staffId": "kexin",
+      "date": "2026-03-02",
+      "hour": 18,
+      "role": "barista"
+    },
+    {
+      "slotId": "mon-chef-18",
+      "staffId": "hau",
+      "date": "2026-03-02",
+      "hour": 18,
+      "role": "chef"
+    },
+    {
+      "slotId": "mon-chef-18",
+      "staffId": "meiwah",
+      "date": "2026-03-02",
+      "hour": 18,
+      "role": "chef"
+    },
+    {
+      "slotId": "mon-barista-19",
+      "staffId": "geri",
+      "date": "2026-03-02",
+      "hour": 19,
+      "role": "barista"
+    },
+    {
+      "slotId": "mon-barista-19",
+      "staffId": "kexin",
+      "date": "2026-03-02",
+      "hour": 19,
+      "role": "barista"
+    },
+    {
+      "slotId": "mon-chef-19",
+      "staffId": "hau",
+      "date": "2026-03-02",
+      "hour": 19,
+      "role": "chef"
+    },
+    {
+      "slotId": "mon-chef-19",
+      "staffId": "meiwah",
+      "date": "2026-03-02",
+      "hour": 19,
+      "role": "chef"
+    },
+    {
+      "slotId": "wed-barista-11",
+      "staffId": "elynn",
+      "date": "2026-03-04",
+      "hour": 11,
+      "role": "barista"
+    },
+    {
+      "slotId": "wed-barista-11",
+      "staffId": "junhui",
+      "date": "2026-03-04",
+      "hour": 11,
+      "role": "barista"
+    },
+    {
+      "slotId": "wed-chef-11",
+      "staffId": "meiwah",
+      "date": "2026-03-04",
+      "hour": 11,
+      "role": "chef"
+    },
+    {
+      "slotId": "wed-barista-12",
+      "staffId": "elynn",
+      "date": "2026-03-04",
+      "hour": 12,
+      "role": "barista"
+    },
+    {
+      "slotId": "wed-barista-12",
+      "staffId": "junhui",
+      "date": "2026-03-04",
+      "hour": 12,
+      "role": "barista"
+    },
+    {
+      "slotId": "wed-chef-12",
+      "staffId": "meiwah",
+      "date": "2026-03-04",
+      "hour": 12,
+      "role": "chef"
+    },
+    {
+      "slotId": "wed-barista-13",
+      "staffId": "elynn",
+      "date": "2026-03-04",
+      "hour": 13,
+      "role": "barista"
+    },
+    {
+      "slotId": "wed-barista-13",
+      "staffId": "junhui",
+      "date": "2026-03-04",
+      "hour": 13,
+      "role": "barista"
+    },
+    {
+      "slotId": "wed-chef-13",
+      "staffId": "hau",
+      "date": "2026-03-04",
+      "hour": 13,
+      "role": "chef"
+    },
+    {
+      "slotId": "wed-chef-13",
+      "staffId": "meiwah",
+      "date": "2026-03-04",
+      "hour": 13,
+      "role": "chef"
+    },
+    {
+      "slotId": "wed-barista-14",
+      "staffId": "elynn",
+      "date": "2026-03-04",
+      "hour": 14,
+      "role": "barista"
+    },
+    {
+      "slotId": "wed-barista-14",
+      "staffId": "junhui",
+      "date": "2026-03-04",
+      "hour": 14,
+      "role": "barista"
+    },
+    {
+      "slotId": "wed-chef-14",
+      "staffId": "hau",
+      "date": "2026-03-04",
+      "hour": 14,
+      "role": "chef"
+    },
+    {
+      "slotId": "wed-chef-14",
+      "staffId": "meiwah",
+      "date": "2026-03-04",
+      "hour": 14,
+      "role": "chef"
+    },
+    {
+      "slotId": "wed-chef-15",
+      "staffId": "hau",
+      "date": "2026-03-04",
+      "hour": 15,
+      "role": "chef"
+    },
+    {
+      "slotId": "wed-chef-15",
+      "staffId": "meiwah",
+      "date": "2026-03-04",
+      "hour": 15,
+      "role": "chef"
+    },
+    {
+      "slotId": "wed-barista-16",
+      "staffId": "geri",
+      "date": "2026-03-04",
+      "hour": 16,
+      "role": "barista"
+    },
+    {
+      "slotId": "wed-barista-16",
+      "staffId": "keryn",
+      "date": "2026-03-04",
+      "hour": 16,
+      "role": "barista"
+    },
+    {
+      "slotId": "wed-chef-16",
+      "staffId": "hau",
+      "date": "2026-03-04",
+      "hour": 16,
+      "role": "chef"
+    },
+    {
+      "slotId": "wed-chef-16",
+      "staffId": "meiwah",
+      "date": "2026-03-04",
+      "hour": 16,
+      "role": "chef"
+    },
+    {
+      "slotId": "wed-barista-17",
+      "staffId": "geri",
+      "date": "2026-03-04",
+      "hour": 17,
+      "role": "barista"
+    },
+    {
+      "slotId": "wed-barista-17",
+      "staffId": "keryn",
+      "date": "2026-03-04",
+      "hour": 17,
+      "role": "barista"
+    },
+    {
+      "slotId": "wed-chef-17",
+      "staffId": "hau",
+      "date": "2026-03-04",
+      "hour": 17,
+      "role": "chef"
+    },
+    {
+      "slotId": "wed-chef-17",
+      "staffId": "meiwah",
+      "date": "2026-03-04",
+      "hour": 17,
+      "role": "chef"
+    },
+    {
+      "slotId": "wed-barista-18",
+      "staffId": "geri",
+      "date": "2026-03-04",
+      "hour": 18,
+      "role": "barista"
+    },
+    {
+      "slotId": "wed-barista-18",
+      "staffId": "keryn",
+      "date": "2026-03-04",
+      "hour": 18,
+      "role": "barista"
+    },
+    {
+      "slotId": "wed-chef-18",
+      "staffId": "hau",
+      "date": "2026-03-04",
+      "hour": 18,
+      "role": "chef"
+    },
+    {
+      "slotId": "wed-chef-18",
+      "staffId": "meiwah",
+      "date": "2026-03-04",
+      "hour": 18,
+      "role": "chef"
+    },
+    {
+      "slotId": "wed-barista-19",
+      "staffId": "geri",
+      "date": "2026-03-04",
+      "hour": 19,
+      "role": "barista"
+    },
+    {
+      "slotId": "wed-barista-19",
+      "staffId": "keryn",
+      "date": "2026-03-04",
+      "hour": 19,
+      "role": "barista"
+    },
+    {
+      "slotId": "wed-chef-19",
+      "staffId": "hau",
+      "date": "2026-03-04",
+      "hour": 19,
+      "role": "chef"
+    },
+    {
+      "slotId": "wed-chef-19",
+      "staffId": "meiwah",
+      "date": "2026-03-04",
+      "hour": 19,
+      "role": "chef"
+    },
+    {
+      "slotId": "thu-barista-11",
+      "staffId": "geri",
+      "date": "2026-03-05",
+      "hour": 11,
+      "role": "barista"
+    },
+    {
+      "slotId": "thu-barista-11",
+      "staffId": "keryn",
+      "date": "2026-03-05",
+      "hour": 11,
+      "role": "barista"
+    },
+    {
+      "slotId": "thu-chef-11",
+      "staffId": "hau",
+      "date": "2026-03-05",
+      "hour": 11,
+      "role": "chef"
+    },
+    {
+      "slotId": "thu-chef-11",
+      "staffId": "meiwah",
+      "date": "2026-03-05",
+      "hour": 11,
+      "role": "chef"
+    },
+    {
+      "slotId": "thu-barista-12",
+      "staffId": "geri",
+      "date": "2026-03-05",
+      "hour": 12,
+      "role": "barista"
+    },
+    {
+      "slotId": "thu-barista-12",
+      "staffId": "keryn",
+      "date": "2026-03-05",
+      "hour": 12,
+      "role": "barista"
+    },
+    {
+      "slotId": "thu-chef-12",
+      "staffId": "hau",
+      "date": "2026-03-05",
+      "hour": 12,
+      "role": "chef"
+    },
+    {
+      "slotId": "thu-chef-12",
+      "staffId": "meiwah",
+      "date": "2026-03-05",
+      "hour": 12,
+      "role": "chef"
+    },
+    {
+      "slotId": "thu-barista-13",
+      "staffId": "geri",
+      "date": "2026-03-05",
+      "hour": 13,
+      "role": "barista"
+    },
+    {
+      "slotId": "thu-barista-13",
+      "staffId": "keryn",
+      "date": "2026-03-05",
+      "hour": 13,
+      "role": "barista"
+    },
+    {
+      "slotId": "thu-chef-13",
+      "staffId": "hau",
+      "date": "2026-03-05",
+      "hour": 13,
+      "role": "chef"
+    },
+    {
+      "slotId": "thu-chef-13",
+      "staffId": "meiwah",
+      "date": "2026-03-05",
+      "hour": 13,
+      "role": "chef"
+    },
+    {
+      "slotId": "thu-barista-14",
+      "staffId": "geri",
+      "date": "2026-03-05",
+      "hour": 14,
+      "role": "barista"
+    },
+    {
+      "slotId": "thu-barista-14",
+      "staffId": "keryn",
+      "date": "2026-03-05",
+      "hour": 14,
+      "role": "barista"
+    },
+    {
+      "slotId": "thu-chef-14",
+      "staffId": "hau",
+      "date": "2026-03-05",
+      "hour": 14,
+      "role": "chef"
+    },
+    {
+      "slotId": "thu-chef-14",
+      "staffId": "meiwah",
+      "date": "2026-03-05",
+      "hour": 14,
+      "role": "chef"
+    },
+    {
+      "slotId": "thu-barista-15",
+      "staffId": "geri",
+      "date": "2026-03-05",
+      "hour": 15,
+      "role": "barista"
+    },
+    {
+      "slotId": "thu-chef-15",
+      "staffId": "hau",
+      "date": "2026-03-05",
+      "hour": 15,
+      "role": "chef"
+    },
+    {
+      "slotId": "thu-chef-15",
+      "staffId": "meiwah",
+      "date": "2026-03-05",
+      "hour": 15,
+      "role": "chef"
+    },
+    {
+      "slotId": "thu-barista-16",
+      "staffId": "jared",
+      "date": "2026-03-05",
+      "hour": 16,
+      "role": "barista"
+    },
+    {
+      "slotId": "thu-barista-16",
+      "staffId": "kexin",
+      "date": "2026-03-05",
+      "hour": 16,
+      "role": "barista"
+    },
+    {
+      "slotId": "thu-chef-16",
+      "staffId": "hau",
+      "date": "2026-03-05",
+      "hour": 16,
+      "role": "chef"
+    },
+    {
+      "slotId": "thu-chef-16",
+      "staffId": "meiwah",
+      "date": "2026-03-05",
+      "hour": 16,
+      "role": "chef"
+    },
+    {
+      "slotId": "thu-barista-17",
+      "staffId": "jared",
+      "date": "2026-03-05",
+      "hour": 17,
+      "role": "barista"
+    },
+    {
+      "slotId": "thu-barista-17",
+      "staffId": "kexin",
+      "date": "2026-03-05",
+      "hour": 17,
+      "role": "barista"
+    },
+    {
+      "slotId": "thu-chef-17",
+      "staffId": "hau",
+      "date": "2026-03-05",
+      "hour": 17,
+      "role": "chef"
+    },
+    {
+      "slotId": "thu-chef-17",
+      "staffId": "meiwah",
+      "date": "2026-03-05",
+      "hour": 17,
+      "role": "chef"
+    },
+    {
+      "slotId": "thu-barista-18",
+      "staffId": "jared",
+      "date": "2026-03-05",
+      "hour": 18,
+      "role": "barista"
+    },
+    {
+      "slotId": "thu-barista-18",
+      "staffId": "kexin",
+      "date": "2026-03-05",
+      "hour": 18,
+      "role": "barista"
+    },
+    {
+      "slotId": "thu-chef-18",
+      "staffId": "hau",
+      "date": "2026-03-05",
+      "hour": 18,
+      "role": "chef"
+    },
+    {
+      "slotId": "thu-chef-18",
+      "staffId": "meiwah",
+      "date": "2026-03-05",
+      "hour": 18,
+      "role": "chef"
+    },
+    {
+      "slotId": "thu-barista-19",
+      "staffId": "jared",
+      "date": "2026-03-05",
+      "hour": 19,
+      "role": "barista"
+    },
+    {
+      "slotId": "thu-barista-19",
+      "staffId": "kexin",
+      "date": "2026-03-05",
+      "hour": 19,
+      "role": "barista"
+    },
+    {
+      "slotId": "thu-chef-19",
+      "staffId": "hau",
+      "date": "2026-03-05",
+      "hour": 19,
+      "role": "chef"
+    },
+    {
+      "slotId": "thu-chef-19",
+      "staffId": "meiwah",
+      "date": "2026-03-05",
+      "hour": 19,
+      "role": "chef"
+    },
+    {
+      "slotId": "fri-barista-11",
+      "staffId": "elisabeth",
+      "date": "2026-03-06",
+      "hour": 11,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-barista-11",
+      "staffId": "kexin",
+      "date": "2026-03-06",
+      "hour": 11,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-barista-11",
+      "staffId": "ulfah",
+      "date": "2026-03-06",
+      "hour": 11,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-chef-11",
+      "staffId": "hau",
+      "date": "2026-03-06",
+      "hour": 11,
+      "role": "chef"
+    },
+    {
+      "slotId": "fri-chef-11",
+      "staffId": "meiwah",
+      "date": "2026-03-06",
+      "hour": 11,
+      "role": "chef"
+    },
+    {
+      "slotId": "fri-barista-12",
+      "staffId": "elisabeth",
+      "date": "2026-03-06",
+      "hour": 12,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-barista-12",
+      "staffId": "kexin",
+      "date": "2026-03-06",
+      "hour": 12,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-barista-12",
+      "staffId": "ulfah",
+      "date": "2026-03-06",
+      "hour": 12,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-chef-12",
+      "staffId": "hau",
+      "date": "2026-03-06",
+      "hour": 12,
+      "role": "chef"
+    },
+    {
+      "slotId": "fri-chef-12",
+      "staffId": "meiwah",
+      "date": "2026-03-06",
+      "hour": 12,
+      "role": "chef"
+    },
+    {
+      "slotId": "fri-barista-13",
+      "staffId": "elisabeth",
+      "date": "2026-03-06",
+      "hour": 13,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-barista-13",
+      "staffId": "kexin",
+      "date": "2026-03-06",
+      "hour": 13,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-barista-13",
+      "staffId": "ulfah",
+      "date": "2026-03-06",
+      "hour": 13,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-chef-13",
+      "staffId": "hau",
+      "date": "2026-03-06",
+      "hour": 13,
+      "role": "chef"
+    },
+    {
+      "slotId": "fri-chef-13",
+      "staffId": "meiwah",
+      "date": "2026-03-06",
+      "hour": 13,
+      "role": "chef"
+    },
+    {
+      "slotId": "fri-barista-14",
+      "staffId": "elisabeth",
+      "date": "2026-03-06",
+      "hour": 14,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-barista-14",
+      "staffId": "kexin",
+      "date": "2026-03-06",
+      "hour": 14,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-barista-14",
+      "staffId": "ulfah",
+      "date": "2026-03-06",
+      "hour": 14,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-chef-14",
+      "staffId": "hau",
+      "date": "2026-03-06",
+      "hour": 14,
+      "role": "chef"
+    },
+    {
+      "slotId": "fri-chef-14",
+      "staffId": "meiwah",
+      "date": "2026-03-06",
+      "hour": 14,
+      "role": "chef"
+    },
+    {
+      "slotId": "fri-barista-15",
+      "staffId": "kexin",
+      "date": "2026-03-06",
+      "hour": 15,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-chef-15",
+      "staffId": "hau",
+      "date": "2026-03-06",
+      "hour": 15,
+      "role": "chef"
+    },
+    {
+      "slotId": "fri-chef-15",
+      "staffId": "meiwah",
+      "date": "2026-03-06",
+      "hour": 15,
+      "role": "chef"
+    },
+    {
+      "slotId": "fri-barista-16",
+      "staffId": "junhui",
+      "date": "2026-03-06",
+      "hour": 16,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-barista-16",
+      "staffId": "matteus",
+      "date": "2026-03-06",
+      "hour": 16,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-chef-16",
+      "staffId": "hau",
+      "date": "2026-03-06",
+      "hour": 16,
+      "role": "chef"
+    },
+    {
+      "slotId": "fri-chef-16",
+      "staffId": "meiwah",
+      "date": "2026-03-06",
+      "hour": 16,
+      "role": "chef"
+    },
+    {
+      "slotId": "fri-barista-17",
+      "staffId": "junhui",
+      "date": "2026-03-06",
+      "hour": 17,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-barista-17",
+      "staffId": "matteus",
+      "date": "2026-03-06",
+      "hour": 17,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-chef-17",
+      "staffId": "hau",
+      "date": "2026-03-06",
+      "hour": 17,
+      "role": "chef"
+    },
+    {
+      "slotId": "fri-chef-17",
+      "staffId": "meiwah",
+      "date": "2026-03-06",
+      "hour": 17,
+      "role": "chef"
+    },
+    {
+      "slotId": "fri-barista-18",
+      "staffId": "junhui",
+      "date": "2026-03-06",
+      "hour": 18,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-barista-18",
+      "staffId": "matteus",
+      "date": "2026-03-06",
+      "hour": 18,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-chef-18",
+      "staffId": "hau",
+      "date": "2026-03-06",
+      "hour": 18,
+      "role": "chef"
+    },
+    {
+      "slotId": "fri-chef-18",
+      "staffId": "meiwah",
+      "date": "2026-03-06",
+      "hour": 18,
+      "role": "chef"
+    },
+    {
+      "slotId": "fri-barista-19",
+      "staffId": "junhui",
+      "date": "2026-03-06",
+      "hour": 19,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-barista-19",
+      "staffId": "matteus",
+      "date": "2026-03-06",
+      "hour": 19,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-chef-19",
+      "staffId": "hau",
+      "date": "2026-03-06",
+      "hour": 19,
+      "role": "chef"
+    },
+    {
+      "slotId": "fri-chef-19",
+      "staffId": "meiwah",
+      "date": "2026-03-06",
+      "hour": 19,
+      "role": "chef"
+    },
+    {
+      "slotId": "sat-barista-9",
+      "staffId": "clemens",
+      "date": "2026-03-07",
+      "hour": 9,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-9",
+      "staffId": "geri",
+      "date": "2026-03-07",
+      "hour": 9,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-9",
+      "staffId": "matteus",
+      "date": "2026-03-07",
+      "hour": 9,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-chef-9",
+      "staffId": "hau",
+      "date": "2026-03-07",
+      "hour": 9,
+      "role": "chef"
+    },
+    {
+      "slotId": "sat-barista-10",
+      "staffId": "clemens",
+      "date": "2026-03-07",
+      "hour": 10,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-10",
+      "staffId": "geri",
+      "date": "2026-03-07",
+      "hour": 10,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-10",
+      "staffId": "matteus",
+      "date": "2026-03-07",
+      "hour": 10,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-10",
+      "staffId": "rachael",
+      "date": "2026-03-07",
+      "hour": 10,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-chef-10",
+      "staffId": "hau",
+      "date": "2026-03-07",
+      "hour": 10,
+      "role": "chef"
+    },
+    {
+      "slotId": "sat-barista-11",
+      "staffId": "clemens",
+      "date": "2026-03-07",
+      "hour": 11,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-11",
+      "staffId": "geri",
+      "date": "2026-03-07",
+      "hour": 11,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-11",
+      "staffId": "matteus",
+      "date": "2026-03-07",
+      "hour": 11,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-11",
+      "staffId": "rachael",
+      "date": "2026-03-07",
+      "hour": 11,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-chef-11",
+      "staffId": "hau",
+      "date": "2026-03-07",
+      "hour": 11,
+      "role": "chef"
+    },
+    {
+      "slotId": "sat-barista-12",
+      "staffId": "clemens",
+      "date": "2026-03-07",
+      "hour": 12,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-12",
+      "staffId": "geri",
+      "date": "2026-03-07",
+      "hour": 12,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-12",
+      "staffId": "matteus",
+      "date": "2026-03-07",
+      "hour": 12,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-12",
+      "staffId": "rachael",
+      "date": "2026-03-07",
+      "hour": 12,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-chef-12",
+      "staffId": "hau",
+      "date": "2026-03-07",
+      "hour": 12,
+      "role": "chef"
+    },
+    {
+      "slotId": "sat-barista-13",
+      "staffId": "clemens",
+      "date": "2026-03-07",
+      "hour": 13,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-13",
+      "staffId": "geri",
+      "date": "2026-03-07",
+      "hour": 13,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-13",
+      "staffId": "matteus",
+      "date": "2026-03-07",
+      "hour": 13,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-13",
+      "staffId": "rachael",
+      "date": "2026-03-07",
+      "hour": 13,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-chef-13",
+      "staffId": "hau",
+      "date": "2026-03-07",
+      "hour": 13,
+      "role": "chef"
+    },
+    {
+      "slotId": "sat-barista-14",
+      "staffId": "clemens",
+      "date": "2026-03-07",
+      "hour": 14,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-14",
+      "staffId": "geri",
+      "date": "2026-03-07",
+      "hour": 14,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-14",
+      "staffId": "matteus",
+      "date": "2026-03-07",
+      "hour": 14,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-14",
+      "staffId": "rachael",
+      "date": "2026-03-07",
+      "hour": 14,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-chef-14",
+      "staffId": "hau",
+      "date": "2026-03-07",
+      "hour": 14,
+      "role": "chef"
+    },
+    {
+      "slotId": "sat-barista-15",
+      "staffId": "geri",
+      "date": "2026-03-07",
+      "hour": 15,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-15",
+      "staffId": "matteus",
+      "date": "2026-03-07",
+      "hour": 15,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-chef-15",
+      "staffId": "hau",
+      "date": "2026-03-07",
+      "hour": 15,
+      "role": "chef"
+    },
+    {
+      "slotId": "sat-barista-16",
+      "staffId": "kaiqi",
+      "date": "2026-03-07",
+      "hour": 16,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-16",
+      "staffId": "keryn",
+      "date": "2026-03-07",
+      "hour": 16,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-chef-16",
+      "staffId": "hau",
+      "date": "2026-03-07",
+      "hour": 16,
+      "role": "chef"
+    },
+    {
+      "slotId": "sat-barista-17",
+      "staffId": "kaiqi",
+      "date": "2026-03-07",
+      "hour": 17,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-17",
+      "staffId": "keryn",
+      "date": "2026-03-07",
+      "hour": 17,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-chef-17",
+      "staffId": "hau",
+      "date": "2026-03-07",
+      "hour": 17,
+      "role": "chef"
+    },
+    {
+      "slotId": "sat-barista-18",
+      "staffId": "kaiqi",
+      "date": "2026-03-07",
+      "hour": 18,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-18",
+      "staffId": "keryn",
+      "date": "2026-03-07",
+      "hour": 18,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-chef-18",
+      "staffId": "hau",
+      "date": "2026-03-07",
+      "hour": 18,
+      "role": "chef"
+    },
+    {
+      "slotId": "sat-barista-19",
+      "staffId": "kaiqi",
+      "date": "2026-03-07",
+      "hour": 19,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-19",
+      "staffId": "keryn",
+      "date": "2026-03-07",
+      "hour": 19,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-chef-19",
+      "staffId": "hau",
+      "date": "2026-03-07",
+      "hour": 19,
+      "role": "chef"
+    },
+    {
+      "slotId": "sun-barista-9",
+      "staffId": "kexin",
+      "date": "2026-03-08",
+      "hour": 9,
+      "role": "barista"
+    },
+    {
+      "slotId": "sun-barista-9",
+      "staffId": "matteus",
+      "date": "2026-03-08",
+      "hour": 9,
+      "role": "barista"
+    },
+    {
+      "slotId": "sun-chef-9",
+      "staffId": "hau",
+      "date": "2026-03-08",
+      "hour": 9,
+      "role": "chef"
+    },
+    {
+      "slotId": "sun-barista-10",
+      "staffId": "kexin",
+      "date": "2026-03-08",
+      "hour": 10,
+      "role": "barista"
+    },
+    {
+      "slotId": "sun-barista-10",
+      "staffId": "matteus",
+      "date": "2026-03-08",
+      "hour": 10,
+      "role": "barista"
+    },
+    {
+      "slotId": "sun-chef-10",
+      "staffId": "hau",
+      "date": "2026-03-08",
+      "hour": 10,
+      "role": "chef"
+    },
+    {
+      "slotId": "sun-barista-11",
+      "staffId": "kexin",
+      "date": "2026-03-08",
+      "hour": 11,
+      "role": "barista"
+    },
+    {
+      "slotId": "sun-barista-11",
+      "staffId": "matteus",
+      "date": "2026-03-08",
+      "hour": 11,
+      "role": "barista"
+    },
+    {
+      "slotId": "sun-chef-11",
+      "staffId": "hau",
+      "date": "2026-03-08",
+      "hour": 11,
+      "role": "chef"
+    },
+    {
+      "slotId": "sun-barista-12",
+      "staffId": "kexin",
+      "date": "2026-03-08",
+      "hour": 12,
+      "role": "barista"
+    },
+    {
+      "slotId": "sun-barista-12",
+      "staffId": "matteus",
+      "date": "2026-03-08",
+      "hour": 12,
+      "role": "barista"
+    },
+    {
+      "slotId": "sun-chef-12",
+      "staffId": "hau",
+      "date": "2026-03-08",
+      "hour": 12,
+      "role": "chef"
+    },
+    {
+      "slotId": "sun-barista-13",
+      "staffId": "kexin",
+      "date": "2026-03-08",
+      "hour": 13,
+      "role": "barista"
+    },
+    {
+      "slotId": "sun-barista-13",
+      "staffId": "matteus",
+      "date": "2026-03-08",
+      "hour": 13,
+      "role": "barista"
+    },
+    {
+      "slotId": "sun-chef-13",
+      "staffId": "hau",
+      "date": "2026-03-08",
+      "hour": 13,
+      "role": "chef"
+    },
+    {
+      "slotId": "sun-barista-14",
+      "staffId": "kexin",
+      "date": "2026-03-08",
+      "hour": 14,
+      "role": "barista"
+    },
+    {
+      "slotId": "sun-barista-14",
+      "staffId": "matteus",
+      "date": "2026-03-08",
+      "hour": 14,
+      "role": "barista"
+    },
+    {
+      "slotId": "sun-chef-14",
+      "staffId": "hau",
+      "date": "2026-03-08",
+      "hour": 14,
+      "role": "chef"
+    },
+    {
+      "slotId": "sun-barista-15",
+      "staffId": "kexin",
+      "date": "2026-03-08",
+      "hour": 15,
+      "role": "barista"
+    },
+    {
+      "slotId": "sun-barista-15",
+      "staffId": "matteus",
+      "date": "2026-03-08",
+      "hour": 15,
+      "role": "barista"
+    },
+    {
+      "slotId": "sun-chef-15",
+      "staffId": "hau",
+      "date": "2026-03-08",
+      "hour": 15,
+      "role": "chef"
+    },
+    {
+      "slotId": "sun-barista-16",
+      "staffId": "rachael",
+      "date": "2026-03-08",
+      "hour": 16,
+      "role": "barista"
+    },
+    {
+      "slotId": "sun-chef-16",
+      "staffId": "hau",
+      "date": "2026-03-08",
+      "hour": 16,
+      "role": "chef"
+    },
+    {
+      "slotId": "sun-barista-17",
+      "staffId": "rachael",
+      "date": "2026-03-08",
+      "hour": 17,
+      "role": "barista"
+    },
+    {
+      "slotId": "sun-chef-17",
+      "staffId": "hau",
+      "date": "2026-03-08",
+      "hour": 17,
+      "role": "chef"
+    },
+    {
+      "slotId": "sun-barista-18",
+      "staffId": "rachael",
+      "date": "2026-03-08",
+      "hour": 18,
+      "role": "barista"
+    },
+    {
+      "slotId": "sun-chef-18",
+      "staffId": "hau",
+      "date": "2026-03-08",
+      "hour": 18,
+      "role": "chef"
+    },
+    {
+      "slotId": "sun-barista-19",
+      "staffId": "rachael",
+      "date": "2026-03-08",
+      "hour": 19,
+      "role": "barista"
+    },
+    {
+      "slotId": "sun-chef-19",
+      "staffId": "hau",
+      "date": "2026-03-08",
+      "hour": 19,
+      "role": "chef"
+    },
+    {
+      "slotId": "mon-barista-20",
+      "staffId": "geri",
+      "date": "2026-03-02",
+      "hour": 20,
+      "role": "barista"
+    },
+    {
+      "slotId": "mon-barista-20",
+      "staffId": "kexin",
+      "date": "2026-03-02",
+      "hour": 20,
+      "role": "barista"
+    },
+    {
+      "slotId": "wed-barista-20",
+      "staffId": "geri",
+      "date": "2026-03-04",
+      "hour": 20,
+      "role": "barista"
+    },
+    {
+      "slotId": "wed-barista-20",
+      "staffId": "keryn",
+      "date": "2026-03-04",
+      "hour": 20,
+      "role": "barista"
+    },
+    {
+      "slotId": "thu-barista-20",
+      "staffId": "jared",
+      "date": "2026-03-05",
+      "hour": 20,
+      "role": "barista"
+    },
+    {
+      "slotId": "thu-barista-20",
+      "staffId": "kexin",
+      "date": "2026-03-05",
+      "hour": 20,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-barista-20",
+      "staffId": "junhui",
+      "date": "2026-03-06",
+      "hour": 20,
+      "role": "barista"
+    },
+    {
+      "slotId": "fri-barista-20",
+      "staffId": "matteus",
+      "date": "2026-03-06",
+      "hour": 20,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-20",
+      "staffId": "kaiqi",
+      "date": "2026-03-07",
+      "hour": 20,
+      "role": "barista"
+    },
+    {
+      "slotId": "sat-barista-20",
+      "staffId": "keryn",
+      "date": "2026-03-07",
+      "hour": 20,
+      "role": "barista"
+    },
+    {
+      "slotId": "sun-barista-20",
+      "staffId": "rachael",
+      "date": "2026-03-08",
+      "hour": 20,
+      "role": "barista"
+    }
+  ]
+}

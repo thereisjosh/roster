@@ -1,0 +1,258 @@
+# Model comparison: Sonnet 4.6 full suite run
+# Run: npm run eval:schedule:compressed:model-compare
+
+description: "Schedule Generation — Sonnet 4.6 Full Suite"
+
+prompts:
+  - id: schedule-generation-compressed
+    label: "Schedule Generation (Compressed)"
+    raw: "file://prompts/schedule-generation-compressed.txt"
+
+providers:
+  - id: anthropic:messages:claude-sonnet-4-6
+    label: "Sonnet 4.6"
+    config:
+      temperature: 0
+      max_tokens: 16384
+
+tests:
+  - description: "Week 23 Feb — cost_optimised"
+    vars:
+      task_type: schedule_generation
+      variationType: cost_optimised
+      input: "file://golden/schedules/week-23feb.json"
+      reference: "file://golden/schedules/week-23feb-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "Week 23 Feb — balanced"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      input: "file://golden/schedules/week-23feb.json"
+      reference: "file://golden/schedules/week-23feb-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "Week 23 Feb — fairness_optimised"
+    vars:
+      task_type: schedule_generation
+      variationType: fairness_optimised
+      input: "file://golden/schedules/week-23feb.json"
+      reference: "file://golden/schedules/week-23feb-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "Week 2 Mar — cost_optimised"
+    vars:
+      task_type: schedule_generation
+      variationType: cost_optimised
+      input: "file://golden/schedules/week-2mar.json"
+      reference: "file://golden/schedules/week-2mar-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "Week 2 Mar — balanced"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      input: "file://golden/schedules/week-2mar.json"
+      reference: "file://golden/schedules/week-2mar-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "Week 2 Mar — fairness_optimised"
+    vars:
+      task_type: schedule_generation
+      variationType: fairness_optimised
+      input: "file://golden/schedules/week-2mar.json"
+      reference: "file://golden/schedules/week-2mar-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "Week 9 Mar — cost_optimised"
+    vars:
+      task_type: schedule_generation
+      variationType: cost_optimised
+      input: "file://golden/schedules/week-9mar.json"
+      reference: "file://golden/schedules/week-9mar-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "Week 9 Mar — balanced"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      input: "file://golden/schedules/week-9mar.json"
+      reference: "file://golden/schedules/week-9mar-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "Week 9 Mar — fairness_optimised"
+    vars:
+      task_type: schedule_generation
+      variationType: fairness_optimised
+      input: "file://golden/schedules/week-9mar.json"
+      reference: "file://golden/schedules/week-9mar-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "Week 16 Mar — cost_optimised"
+    vars:
+      task_type: schedule_generation
+      variationType: cost_optimised
+      input: "file://golden/schedules/week-16mar.json"
+      reference: "file://golden/schedules/week-16mar-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "Week 16 Mar — balanced"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      input: "file://golden/schedules/week-16mar.json"
+      reference: "file://golden/schedules/week-16mar-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "Week 16 Mar — fairness_optimised"
+    vars:
+      task_type: schedule_generation
+      variationType: fairness_optimised
+      input: "file://golden/schedules/week-16mar.json"
+      reference: "file://golden/schedules/week-16mar-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "Week 23 Mar — cost_optimised"
+    vars:
+      task_type: schedule_generation
+      variationType: cost_optimised
+      input: "file://golden/schedules/week-23mar.json"
+      reference: "file://golden/schedules/week-23mar-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "Week 23 Mar — balanced"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      input: "file://golden/schedules/week-23mar.json"
+      reference: "file://golden/schedules/week-23mar-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "Week 23 Mar — fairness_optimised"
+    vars:
+      task_type: schedule_generation
+      variationType: fairness_optimised
+      input: "file://golden/schedules/week-23mar.json"
+      reference: "file://golden/schedules/week-23mar-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "Week 30 Mar — cost_optimised"
+    vars:
+      task_type: schedule_generation
+      variationType: cost_optimised
+      input: "file://golden/schedules/week-30mar.json"
+      reference: "file://golden/schedules/week-30mar-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "Week 30 Mar — balanced"
+    vars:
+      task_type: schedule_generation
+      variationType: balanced
+      input: "file://golden/schedules/week-30mar.json"
+      reference: "file://golden/schedules/week-30mar-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+  - description: "Week 30 Mar — fairness_optimised"
+    vars:
+      task_type: schedule_generation
+      variationType: fairness_optimised
+      input: "file://golden/schedules/week-30mar.json"
+      reference: "file://golden/schedules/week-30mar-expected-slots.json"
+    assert:
+      - type: is-json
+      - type: javascript
+        value: "file://scorers/slot-scorer.ts"
+      - type: javascript
+        value: "file://scorers/fairness-scorer.ts"
+
+outputPath: evals/results/schedule-generation-compressed-model-compare.json
+
+defaultTest:
+  options:
+    transformVars: "file://transforms/compute-eligibility-compressed.js"
+    transform: "file://transforms/staff-grouped-to-slots.js"

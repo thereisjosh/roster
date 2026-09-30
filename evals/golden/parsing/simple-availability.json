@@ -1,0 +1,40 @@
+{
+  "description": "Simple English availability messages",
+  "cases": [
+    {
+      "input": "I can work Monday to Wednesday. Thursday and Friday I'm off.",
+      "expected": {
+        "entries": [
+          { "day": "monday", "available": true },
+          { "day": "tuesday", "available": true },
+          { "day": "wednesday", "available": true },
+          { "day": "thursday", "available": false },
+          { "day": "friday", "available": false }
+        ]
+      }
+    },
+    {
+      "input": "Available 9am to 5pm on Tuesday and Thursday. Rest of the week I cannot.",
+      "expected": {
+        "entries": [
+          { "day": "tuesday", "available": true, "startTime": "09:00", "endTime": "17:00" },
+          { "day": "thursday", "available": true, "startTime": "09:00", "endTime": "17:00" }
+        ]
+      }
+    },
+    {
+      "input": "Next week all good except Saturday, got family event",
+      "expected": {
+        "entries": [
+          { "day": "monday", "available": true },
+          { "day": "tuesday", "available": true },
+          { "day": "wednesday", "available": true },
+          { "day": "thursday", "available": true },
+          { "day": "friday", "available": true },
+          { "day": "saturday", "available": false, "reason": "family event" },
+          { "day": "sunday", "available": true }
+        ]
+      }
+    }
+  ]
+}

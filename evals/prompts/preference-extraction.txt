@@ -1,0 +1,27 @@
+You are extracting scheduling preferences from a staff member's conversation history. Identify recurring patterns and explicit preference statements.
+
+CONVERSATION:
+{{input}}
+
+Extract structured preferences as JSON:
+{
+  "preferences": [
+    {
+      "type": "shift_time|day_off|role|coworker|hours",
+      "description": "human-readable description",
+      "rule": {
+        "field": "day|time|role|coworker|hours",
+        "operator": "prefer|avoid|require|max|min",
+        "value": "string or number"
+      },
+      "confidence": 0.0-1.0,
+      "source": "quote from conversation"
+    }
+  ]
+}
+
+RULES:
+- Only extract preferences explicitly stated or strongly implied
+- Set confidence based on how direct the statement is (direct request = 0.9+, implied = 0.5-0.7)
+- Include the source quote for traceability
+- Common patterns: "I prefer morning shifts", "Don't schedule me with X", "Max 3 days a week"

@@ -1,0 +1,671 @@
+{
+  "description": "Real cafe week — 23 Feb 2026, 13 staff (11 baristas + 2 chefs), Tuesday closed",
+  "weekStart": "2026-02-23",
+  "business": {
+    "name": "Our Place Cafe",
+    "type": "cafe",
+    "operatingHours": {
+      "0": {
+        "open": "09:00",
+        "close": "21:00"
+      },
+      "1": {
+        "open": "11:00",
+        "close": "21:00"
+      },
+      "3": {
+        "open": "11:00",
+        "close": "21:00"
+      },
+      "4": {
+        "open": "11:00",
+        "close": "21:00"
+      },
+      "5": {
+        "open": "11:00",
+        "close": "21:00"
+      },
+      "6": {
+        "open": "09:00",
+        "close": "21:00"
+      }
+    }
+  },
+  "staff": [
+    {
+      "id": "wilson",
+      "name": "Wilson",
+      "qualifications": [
+        "barista"
+      ],
+      "level": "L2",
+      "employmentType": "part-time",
+      "maxWeeklyHours": 25,
+      "hourlyRate": 12,
+      "unavailable": [
+        "mon-dinner",
+        "wed-dinner",
+        "thu-lunch",
+        "thu-dinner",
+        "fri-dinner",
+        "sat-evening",
+        "sun-brunch",
+        "sun-evening"
+      ],
+      "availability": [
+        {
+          "day": "2026-02-23",
+          "startTime": "11:00",
+          "endTime": "16:00"
+        },
+        {
+          "day": "2026-02-25",
+          "startTime": "11:00",
+          "endTime": "16:00"
+        },
+        {
+          "day": "2026-02-27",
+          "startTime": "11:00",
+          "endTime": "16:00"
+        },
+        {
+          "day": "2026-02-28",
+          "startTime": "09:00",
+          "endTime": "16:00"
+        }
+      ]
+    },
+    {
+      "id": "geri",
+      "name": "Geri",
+      "qualifications": [
+        "barista"
+      ],
+      "level": "L2",
+      "employmentType": "part-time",
+      "maxWeeklyHours": 25,
+      "hourlyRate": 11,
+      "unavailable": [
+        "mon-lunch",
+        "wed-lunch",
+        "wed-dinner",
+        "thu-lunch",
+        "fri-lunch",
+        "sat-evening",
+        "sun-brunch",
+        "sun-evening"
+      ],
+      "availability": [
+        {
+          "day": "2026-02-23",
+          "startTime": "15:00",
+          "endTime": "21:00"
+        },
+        {
+          "day": "2026-02-26",
+          "startTime": "15:00",
+          "endTime": "21:00"
+        },
+        {
+          "day": "2026-02-27",
+          "startTime": "15:00",
+          "endTime": "21:00"
+        },
+        {
+          "day": "2026-02-28",
+          "startTime": "09:00",
+          "endTime": "16:00"
+        }
+      ]
+    },
+    {
+      "id": "kexin",
+      "name": "Kexin",
+      "qualifications": [
+        "barista"
+      ],
+      "level": "L2",
+      "employmentType": "part-time",
+      "maxWeeklyHours": 25,
+      "hourlyRate": 12,
+      "unavailable": [
+        "mon-lunch",
+        "mon-dinner",
+        "wed-lunch",
+        "wed-dinner",
+        "thu-lunch",
+        "fri-dinner",
+        "sat-brunch",
+        "sat-evening",
+        "sun-evening"
+      ],
+      "availability": [
+        {
+          "day": "2026-02-26",
+          "startTime": "15:00",
+          "endTime": "21:00"
+        },
+        {
+          "day": "2026-02-27",
+          "startTime": "11:00",
+          "endTime": "15:00"
+        },
+        {
+          "day": "2026-03-01",
+          "startTime": "09:00",
+          "endTime": "15:00"
+        }
+      ]
+    },
+    {
+      "id": "clemens",
+      "name": "Clemens",
+      "qualifications": [
+        "barista"
+      ],
+      "level": "L1",
+      "employmentType": "part-time",
+      "maxWeeklyHours": 20,
+      "hourlyRate": 10,
+      "unavailable": [
+        "mon-lunch",
+        "mon-dinner",
+        "wed-lunch",
+        "wed-dinner",
+        "thu-dinner",
+        "fri-lunch",
+        "fri-dinner",
+        "sat-evening",
+        "sun-brunch",
+        "sun-evening"
+      ],
+      "availability": [
+        {
+          "day": "2026-02-26",
+          "startTime": "11:00",
+          "endTime": "16:00"
+        },
+        {
+          "day": "2026-02-28",
+          "startTime": "09:00",
+          "endTime": "15:00"
+        }
+      ]
+    },
+    {
+      "id": "matteus",
+      "name": "Matteus",
+      "qualifications": [
+        "barista"
+      ],
+      "level": "L1",
+      "employmentType": "part-time",
+      "maxWeeklyHours": 20,
+      "hourlyRate": 10,
+      "unavailable": [
+        "mon-lunch",
+        "mon-dinner",
+        "thu-lunch",
+        "thu-dinner",
+        "fri-lunch",
+        "fri-dinner",
+        "sat-evening",
+        "sun-brunch"
+      ],
+      "availability": [
+        {
+          "day": "2026-02-25",
+          "startTime": "11:00",
+          "endTime": "21:00"
+        },
+        {
+          "day": "2026-02-28",
+          "startTime": "09:00",
+          "endTime": "16:00"
+        },
+        {
+          "day": "2026-03-01",
+          "startTime": "15:00",
+          "endTime": "21:00"
+        }
+      ]
+    },
+    {
+      "id": "elisabeth",
+      "name": "Elisabeth",
+      "qualifications": [
+        "barista"
+      ],
+      "level": "L2",
+      "employmentType": "part-time",
+      "maxWeeklyHours": 20,
+      "hourlyRate": 11,
+      "unavailable": [
+        "mon-lunch",
+        "mon-dinner",
+        "wed-lunch",
+        "thu-lunch",
+        "thu-dinner",
+        "fri-dinner",
+        "sat-brunch",
+        "sat-evening",
+        "sun-brunch",
+        "sun-evening"
+      ],
+      "availability": [
+        {
+          "day": "2026-02-25",
+          "startTime": "15:00",
+          "endTime": "21:00"
+        },
+        {
+          "day": "2026-02-27",
+          "startTime": "11:00",
+          "endTime": "15:00"
+        }
+      ]
+    },
+    {
+      "id": "kaiqi",
+      "name": "Kai Qi",
+      "qualifications": [
+        "barista"
+      ],
+      "level": "L1",
+      "employmentType": "part-time",
+      "maxWeeklyHours": 20,
+      "hourlyRate": 10,
+      "unavailable": [
+        "mon-lunch",
+        "mon-dinner",
+        "wed-lunch",
+        "wed-dinner",
+        "thu-lunch",
+        "thu-dinner",
+        "fri-lunch",
+        "fri-dinner",
+        "sat-brunch",
+        "sun-brunch",
+        "sun-evening"
+      ],
+      "availability": [
+        {
+          "day": "2026-02-28",
+          "startTime": "15:00",
+          "endTime": "21:00"
+        }
+      ]
+    },
+    {
+      "id": "rachael",
+      "name": "Rachael",
+      "qualifications": [
+        "barista"
+      ],
+      "level": "L1",
+      "employmentType": "part-time",
+      "maxWeeklyHours": 20,
+      "hourlyRate": 11,
+      "unavailable": [
+        "mon-lunch",
+        "mon-dinner",
+        "wed-lunch",
+        "wed-dinner",
+        "thu-lunch",
+        "thu-dinner",
+        "fri-dinner",
+        "sat-brunch",
+        "sun-evening"
+      ],
+      "availability": [
+        {
+          "day": "2026-02-27",
+          "startTime": "11:00",
+          "endTime": "16:00"
+        },
+        {
+          "day": "2026-02-28",
+          "startTime": "15:00",
+          "endTime": "21:00"
+        },
+        {
+          "day": "2026-03-01",
+          "startTime": "09:00",
+          "endTime": "15:00"
+        }
+      ]
+    },
+    {
+      "id": "keryn",
+      "name": "Keryn",
+      "qualifications": [
+        "barista"
+      ],
+      "level": "L2",
+      "employmentType": "part-time",
+      "maxWeeklyHours": 25,
+      "hourlyRate": 11,
+      "unavailable": [
+        "mon-lunch",
+        "mon-dinner",
+        "wed-lunch",
+        "thu-dinner",
+        "fri-lunch",
+        "fri-dinner",
+        "sat-brunch",
+        "sat-evening",
+        "sun-brunch",
+        "sun-evening"
+      ],
+      "availability": [
+        {
+          "day": "2026-02-25",
+          "startTime": "15:00",
+          "endTime": "21:00"
+        },
+        {
+          "day": "2026-02-26",
+          "startTime": "11:00",
+          "endTime": "15:00"
+        }
+      ]
+    },
+    {
+      "id": "junhui",
+      "name": "Jun Hui",
+      "qualifications": [
+        "barista"
+      ],
+      "level": "L1",
+      "employmentType": "part-time",
+      "maxWeeklyHours": 20,
+      "hourlyRate": 11,
+      "unavailable": [
+        "mon-lunch",
+        "wed-lunch",
+        "wed-dinner",
+        "thu-lunch",
+        "fri-lunch",
+        "fri-dinner",
+        "sat-brunch",
+        "sat-evening",
+        "sun-brunch",
+        "sun-evening"
+      ],
+      "availability": [
+        {
+          "day": "2026-02-23",
+          "startTime": "15:00",
+          "endTime": "21:00"
+        },
+        {
+          "day": "2026-02-26",
+          "startTime": "15:00",
+          "endTime": "21:00"
+        }
+      ]
+    },
+    {
+      "id": "jared",
+      "name": "Jared",
+      "qualifications": [
+        "barista"
+      ],
+      "level": "L1",
+      "employmentType": "part-time",
+      "maxWeeklyHours": 20,
+      "hourlyRate": 11,
+      "unavailable": [
+        "mon-dinner",
+        "wed-dinner",
+        "thu-lunch",
+        "thu-dinner",
+        "fri-lunch",
+        "fri-dinner",
+        "sat-brunch",
+        "sat-evening",
+        "sun-brunch",
+        "sun-evening"
+      ],
+      "availability": [
+        {
+          "day": "2026-02-23",
+          "startTime": "11:00",
+          "endTime": "16:00"
+        },
+        {
+          "day": "2026-02-25",
+          "startTime": "11:00",
+          "endTime": "16:00"
+        }
+      ]
+    },
+    {
+      "id": "hau",
+      "name": "Hau",
+      "qualifications": [
+        "chef"
+      ],
+      "level": "L2",
+      "employmentType": "full-time",
+      "maxWeeklyHours": 44,
+      "hourlyRate": 16,
+      "unavailable": [],
+      "availability": [
+        {
+          "day": "2026-02-23",
+          "startTime": "11:00",
+          "endTime": "21:00"
+        },
+        {
+          "day": "2026-02-25",
+          "startTime": "11:00",
+          "endTime": "21:00"
+        },
+        {
+          "day": "2026-02-26",
+          "startTime": "11:00",
+          "endTime": "21:00"
+        },
+        {
+          "day": "2026-02-27",
+          "startTime": "11:00",
+          "endTime": "21:00"
+        },
+        {
+          "day": "2026-02-28",
+          "startTime": "09:00",
+          "endTime": "21:00"
+        },
+        {
+          "day": "2026-03-01",
+          "startTime": "09:00",
+          "endTime": "21:00"
+        }
+      ]
+    },
+    {
+      "id": "meiwah",
+      "name": "Mei Wah",
+      "qualifications": [
+        "chef"
+      ],
+      "level": "L2",
+      "employmentType": "full-time",
+      "maxWeeklyHours": 44,
+      "hourlyRate": 15,
+      "unavailable": [],
+      "availability": [
+        {
+          "day": "2026-02-23",
+          "startTime": "11:00",
+          "endTime": "21:00"
+        },
+        {
+          "day": "2026-02-25",
+          "startTime": "11:00",
+          "endTime": "21:00"
+        },
+        {
+          "day": "2026-02-26",
+          "startTime": "11:00",
+          "endTime": "21:00"
+        },
+        {
+          "day": "2026-02-27",
+          "startTime": "11:00",
+          "endTime": "21:00"
+        },
+        {
+          "day": "2026-02-28",
+          "startTime": "09:00",
+          "endTime": "21:00"
+        },
+        {
+          "day": "2026-03-01",
+          "startTime": "09:00",
+          "endTime": "21:00"
+        }
+      ]
+    }
+  ],
+  "businessConfig": {
+    "minRestHoursBetweenShifts": 10,
+    "maxConsecutiveDays": 6,
+    "closedDays": [
+      2
+    ],
+    "fullTimeHours": {
+      "min": 40,
+      "target": 44,
+      "max": 48
+    },
+    "breakRules": [
+      {
+        "name": "Lunch",
+        "durationMinutes": 60
+      },
+      {
+        "name": "Dinner",
+        "durationMinutes": 60
+      }
+    ],
+    "breakDeduction": {
+      "enabled": true,
+      "appliesTo": "full-time"
+    },
+    "coverageRequirements": [
+      {
+        "role": "barista",
+        "days": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "startTime": "11:00",
+        "endTime": "15:00",
+        "minStaff": 1,
+        "maxStaff": 3
+      },
+      {
+        "role": "barista",
+        "days": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "startTime": "15:00",
+        "endTime": "21:00",
+        "minStaff": 2,
+        "maxStaff": 5
+      },
+      {
+        "role": "chef",
+        "days": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "startTime": "11:00",
+        "endTime": "20:00",
+        "minStaff": 1,
+        "maxStaff": 2
+      },
+      {
+        "role": "barista",
+        "days": [
+          0,
+          6
+        ],
+        "startTime": "09:00",
+        "endTime": "15:00",
+        "minStaff": 2,
+        "maxStaff": 5
+      },
+      {
+        "role": "barista",
+        "days": [
+          6
+        ],
+        "startTime": "15:00",
+        "endTime": "21:00",
+        "minStaff": 2,
+        "maxStaff": 5
+      },
+      {
+        "role": "barista",
+        "days": [
+          0
+        ],
+        "startTime": "15:00",
+        "endTime": "21:00",
+        "minStaff": 1,
+        "maxStaff": 6
+      },
+      {
+        "role": "chef",
+        "days": [
+          0,
+          6
+        ],
+        "startTime": "09:00",
+        "endTime": "20:00",
+        "minStaff": 1,
+        "maxStaff": 2
+      }
+    ],
+    "weights": {
+      "cost": 0.5,
+      "fairness": 0.5,
+      "preference": 0
+    }
+  },
+  "preferenceRules": [
+    {
+      "ruleType": "hard",
+      "ruleText": "Level 1 (L1) staff must always be paired with a Level 2 (L2) or Manager on the same shift for supervision"
+    },
+    {
+      "ruleType": "hard",
+      "ruleText": "Full-time staff must be scheduled for at least 2 weekend shifts per week"
+    },
+    {
+      "ruleType": "soft",
+      "ruleText": "During peak lunch period (11:30-14:00), prioritise having more staff on shift"
+    },
+    {
+      "ruleType": "soft",
+      "ruleText": "During peak dinner period (18:00-20:30), prioritise having more staff on shift"
+    }
+  ],
+  "expected": {
+    "allShiftsFilled": false,
+    "noUnavailableViolations": true,
+    "noHoursViolations": true,
+    "noRestViolations": true,
+    "noQualificationViolations": true
+  }
+}

@@ -1,0 +1,12 @@
+ALTER TABLE "staff_relationship" ADD COLUMN "semantics" text;
+ALTER TABLE "staff_relationship" ADD COLUMN "label" text;
+UPDATE "staff_relationship" SET semantics = 'separate', label = 'friction' WHERE type = 'friction';
+UPDATE "staff_relationship" SET semantics = 'pair', label = 'affinity' WHERE type = 'affinity';
+UPDATE "staff_relationship" SET semantics = 'pair', label = 'mentorship' WHERE type = 'mentorship';
+UPDATE "staff_relationship" SET semantics = 'pair', label = 'requires senior' WHERE type = 'requires_senior';
+ALTER TABLE "staff_relationship" ALTER COLUMN "semantics" SET NOT NULL;
+ALTER TABLE "staff_relationship" ALTER COLUMN "label" SET NOT NULL;
+ALTER TABLE "staff_relationship" DROP COLUMN "type";
+DROP INDEX IF EXISTS "staff_rel_pair_type_idx";
+CREATE UNIQUE INDEX "staff_rel_pair_semantics_idx" ON "staff_relationship" ("business_id", "staff_id_1", "staff_id_2", "semantics", "label");
+DROP TYPE IF EXISTS "relationship_type";

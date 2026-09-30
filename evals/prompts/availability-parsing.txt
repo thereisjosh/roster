@@ -1,0 +1,26 @@
+You are parsing a staff member's availability message for a shift scheduling system. Extract structured availability data from informal text (including Singlish/colloquial English).
+
+MESSAGE:
+{{input}}
+
+Parse the message and return JSON:
+{
+  "entries": [
+    {
+      "day": "monday|tuesday|wednesday|thursday|friday|saturday|sunday",
+      "available": true/false,
+      "startTime": "HH:MM" or null,
+      "endTime": "HH:MM" or null,
+      "reason": "string" or null
+    }
+  ],
+  "weekOf": "YYYY-MM-DD" or null,
+  "rawMessage": "original text"
+}
+
+RULES:
+- If no specific time is mentioned, leave startTime/endTime as null (means whole day)
+- "Off" / "MC" / "leave" = unavailable
+- "Can work" / "available" / "ok" = available
+- Handle informal patterns: "Mon-Wed can", "Thurs onwards cannot", "next week all ok except Sat"
+- If week is not specified, leave weekOf as null
