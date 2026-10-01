@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { MobileNav } from "@/components/layout/mobile-nav";
 import { SidebarNav } from "@/components/layout/sidebar-nav";
+import { SignOutButton } from "@/components/layout/sign-out-button";
 
 export default async function DashboardLayout({
   children,
@@ -53,8 +54,11 @@ export default async function DashboardLayout({
               <span className="text-sm font-bold">Roster</span>
             </div>
           </div>
-          <div className="text-sm text-muted-foreground">
-            {session.user.email}
+          <div className="flex items-center gap-2">
+            <span className="hidden text-sm text-muted-foreground sm:inline">
+              {session.user.email}
+            </span>
+            <SignOutButton />
           </div>
         </header>
         <main id="main-content" className="flex-1 p-4 md:p-6">
